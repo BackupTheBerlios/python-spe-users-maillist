@@ -1,0 +1,22 @@
+From Matthias.Milczynski at med.kuleuven.be  Tue Dec 29 12:17:18 2009
+From: Matthias.Milczynski at med.kuleuven.be (Matthias Milczynski)
+Date: Tue, 29 Dec 2009 12:17:18 +0100
+Subject: [spe-users] Customize Syntax Highlighting Colors
+Message-ID: <1262085438.2430.8.camel@MiloToy>
+
+Dear SPE-list, 
+
+sorry if I bring up a frequently asked question (joined the list
+yesterday) but as I figured out it is not possible yet to customize the
+syntax highlighting colors (?). However, in the "dialogs" folder of the
+"_spe" directory (version 0.8.4.i, checked out via svn) there is a
+stcStyleEditor.py script basically providing exactly this. Is this going
+to be a new feature of the next SPE release or is it possible to
+incorporate this dialog into the recent SPE version already?
+
+Thanks a lot!
+
+Matthias
+
+
+

@@ -1,0 +1,235 @@
+From uglenbatman at gmail.com  Fri Oct  2 16:23:45 2009
+From: uglenbatman at gmail.com (jacob sikker remin)
+Date: Fri, 02 Oct 2009 16:23:45 +0200
+Subject: [spe-users] noob Q: cannot get spe to run scripts in ubuntu 9.04
+Message-ID: <4AC60CF1.1080709@gmail.com>
+
+hej spe specialist,
+
+i am very new to python and this list. so i am sorry if i post something 
+which has already been covered on this list or elsewhere.
+
+i have installed spe on my computer running ubuntu 9.04... i can lauch 
+spe just fine, but when i try to run a script nothing happens....
+like described here: 
+https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044
+
+i tried to update python to version 2.8 but all i can find in synaptic 
+is 3.0
+
+this is to make the following patch:
+
+    stani <https://launchpad.net/%7Estani> wrote on 2009-05-22: 	#4
+    <https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044/comments/4>
+
+
+    The minimal patch is only changing one line:
+    sudo gedit /usr/bin/spe
+
+    Change this line:
+    MIN_WX_VERSION = '2.5.4.1'
+
+    into:
+    MIN_WX_VERSION = '2.8'
+
+    After that you can run your scripts happily again. I'll prepare an
+    official patch and attach it to this bug.
+
+i edited the file, but still when starting spe, the version which is 
+displayed in the shell is 2.6.2 -- how can i get it to recognize 3.0.1?
+or how can i install 2.8 and get it to recognize this?
+
+i really hope you can help me, i am very excited to get up and running 
+with python.
+thank you very much,
+jacob
+
+-- 
+bleep:
+http://tthheessiiss.wordpress.com/
+http://giantshouldersherewecome.wordpress.com/
+http://campingsex.org
+http://mikrogalleriet.net
+http://8bitklubben.dk
+http://myspace.com/blissfullymediocre
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20091002/6781712c/attachment.html>
+
+From uglenbatman at gmail.com  Fri Oct  2 16:26:14 2009
+From: uglenbatman at gmail.com (jacob sikker remin)
+Date: Fri, 02 Oct 2009 16:26:14 +0200
+Subject: [spe-users] [Fwd: noob Q: cannot get spe to run scripts in ubuntu
+	9.04]
+Message-ID: <4AC60D86.50507@gmail.com>
+
+perhaps i should expand, after editing the file, i do now get an error 
+when trying to run (F9):
+
+ "/home/jsr/Desktop/computer spils prototyper/Examples/chimp.py"
+Traceback (most recent call last):
+ File "/home/jsr/Desktop/computer spils prototyper/Examples/chimp.py", 
+line 13, in <module>
+from pygame.compat import geterror
+ImportError: No module named compat
+Script terminated.
+
+sorry for the double post
+best,
+jacob
+
+-------- Original Message --------
+From: 	- Fri Oct 02 16:23:51 2009
+X-Mozilla-Status: 	0001
+X-Mozilla-Status2: 	00800000
+X-Mozilla-Keys: 	
+Message-ID: 	<4AC60CF1.1080709 at gmail.com>
+Date: 	Fri, 02 Oct 2009 16:23:45 +0200
+From: 	jacob sikker remin <uglenbatman at gmail.com>
+User-Agent: 	Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 	1.0
+To: 	python-spe-users at lists.berlios.de
+Subject: 	noob Q: cannot get spe to run scripts in ubuntu 9.04
+Content-Type: 	multipart/alternative; 
+boundary="------------090309060901070809080405"
+
+
+
+hej spe specialist,
+
+i am very new to python and this list. so i am sorry if i post something 
+which has already been covered on this list or elsewhere.
+
+i have installed spe on my computer running ubuntu 9.04... i can lauch 
+spe just fine, but when i try to run a script nothing happens....
+like described here: 
+https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044
+
+i tried to update python to version 2.8 but all i can find in synaptic 
+is 3.0
+
+this is to make the following patch:
+
+    stani <https://launchpad.net/%7Estani> wrote on 2009-05-22: 	#4
+    <https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044/comments/4>
+
+
+    The minimal patch is only changing one line:
+    sudo gedit /usr/bin/spe
+
+    Change this line:
+    MIN_WX_VERSION = '2.5.4.1'
+
+    into:
+    MIN_WX_VERSION = '2.8'
+
+    After that you can run your scripts happily again. I'll prepare an
+    official patch and attach it to this bug.
+
+i edited the file, but still when starting spe, the version which is 
+displayed in the shell is 2.6.2 -- how can i get it to recognize 3.0.1?
+or how can i install 2.8 and get it to recognize this?
+
+i really hope you can help me, i am very excited to get up and running 
+with python.
+thank you very much,
+jacob
+
+-- 
+bleep:
+http://tthheessiiss.wordpress.com/
+http://giantshouldersherewecome.wordpress.com/
+http://campingsex.org
+http://mikrogalleriet.net
+http://8bitklubben.dk
+http://myspace.com/blissfullymediocre
+
+
+-- 
+bleep:
+http://tthheessiiss.wordpress.com/
+http://giantshouldersherewecome.wordpress.com/
+http://campingsex.org
+http://mikrogalleriet.net
+http://8bitklubben.dk
+http://myspace.com/blissfullymediocre
+
+
+
+From spe.stani.be at gmail.com  Fri Oct  2 20:56:50 2009
+From: spe.stani.be at gmail.com (Stani)
+Date: Fri, 2 Oct 2009 20:56:50 +0200
+Subject: [spe-users] [Fwd: noob Q: cannot get spe to run scripts in
+	ubuntu 9.04]
+In-Reply-To: <4AC60D86.50507@gmail.com>
+References: <4AC60D86.50507@gmail.com>
+Message-ID: <2078a7ad0910021156p72072510q5720e50f17f0dd0f@mail.gmail.com>
+
+On Fri, Oct 2, 2009 at 4:26 PM, jacob sikker remin
+<uglenbatman at gmail.com> wrote:
+> perhaps i should expand, after editing the file, i do now get an error
+> when trying to run (F9):
+>
+> ?"/home/jsr/Desktop/computer spils prototyper/Examples/chimp.py"
+> Traceback (most recent call last):
+> ?File "/home/jsr/Desktop/computer spils prototyper/Examples/chimp.py",
+> line 13, in <module>
+> from pygame.compat import geterror
+> ImportError: No module named compat
+> Script terminated.
+>
+> sorry for the double post
+> best,
+> jacob
+>
+That is a bug related to pygame. Please ask this on the pygame mailing list.
+
+
+From tim_grove at sil.org  Tue Oct 27 10:38:53 2009
+From: tim_grove at sil.org (Timothy W. Grove)
+Date: Tue, 27 Oct 2009 09:38:53 +0000
+Subject: [spe-users] SPE and iPython - a solution
+Message-ID: <4AE6BFAD.4080707@sil.org>
+
+I've just started to experiment with using iPython 
+(http://ipython.scipy.org/moin/) and wondered how it could be integrated 
+into SPE (http://pythonide.stani.be/). I found a few threads about it, 
+but no solutions, so I started digging around in Stani's code and came 
+up with the following solution for starters. This doesn't (yet) offer 
+any other functionality from SPE, such as importing a script into the 
+iPython shell or drag-and-drop of files onto the panel for execution, 
+but it should add an extra panel to SPE containing an iPython shell. I'm 
+working under Windows Vista with Python 2.6 and wxPython 2.8, using 
+ipython-0.10. Hope this might help someone else.
+
+Best regards,
+Timothy Grove
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# IP_Shell.py - version 0.1.0
+
+from IPython.gui.wx.ipython_view import IPShellWidget
+
+class Panel(IPShellWidget):
+    """
+    A simple class to add an iPython panel to SPE.
+
+    To use:
+    1. Create a file with this code, named 'IP_Shell.py', and add it to 
+\_spe\tabs\.
+    2. Duplicate 'shell.png' in \_spe\skins\default\ and rename it to 
+'ip_shell.png' .
+    3. Edit 'Parent.py' in \_spe\. Change 'TABS = ['Shell','Locals', 
+...]' (line 44 in my editor) to
+                                          'TABS = 
+['Shell','IP_Shell','Locals', ...]'.
+    """
+
+    def __init__(self,panel):
+        IPShellWidget.__init__(self, panel)
+
+
+
+

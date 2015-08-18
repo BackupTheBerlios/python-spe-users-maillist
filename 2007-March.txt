@@ -1,0 +1,36 @@
+From spe.stani.be at gmail.com  Tue Mar  6 14:05:14 2007
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Tue, 6 Mar 2007 14:05:14 +0100
+Subject: [spe-users] Please test SPE 0.8.4 from subversion (new release soon)
+Message-ID: <2078a7ad0703060505u2c22afd9xaee089b0b98f521f@mail.gmail.com>
+
+Hi all,
+
+I've been working a lot on fixing SPE and upgrading it with the latest
+plugins. The winpdb debugger no longer fails and wxGlade crashes are
+history. Is that not great? Are you eager to try it out yourself?
+Please do! Get it from subversion and test it for any critical bug, so
+I can iron it out. I have been patching a lot for Ubuntu users, who
+will be very pleased with this release, and I'd like to thank Jurjen a
+lot for his work on Mac issues. This is a definitely a release
+everyone should upgrade to, wether you use windows, mac or linux!
+
+Here is an overview what has been done:
+
+The focus in this release is bugfixing, plugin upgrades and
+compatibility with wxPython 2.8, but it still works on wxPython 2.6
+
+Upgrades:
+- WinPdb to 1.0.8 (not fail in timely manner anymore)
+- wxGlade to latest cvs (support for wxWindows2.8)
+
+New features:
+- Save as copy
+- Clear output pane
+
+Read more and comment at http://pythonide.stani.be
+
+PS. Winpdb does not work well on Mac & wxpython2.8 Nir is working on
+an update. So when it comes out it will be included with SPE.
+
+

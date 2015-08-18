@@ -1,0 +1,178 @@
+From gerard.blais at gmail.com  Tue Jul 15 14:22:34 2008
+From: gerard.blais at gmail.com (Gerard Blais)
+Date: Tue, 15 Jul 2008 08:22:34 -0400
+Subject: [spe-users] Question on zoom feature in Windows
+Message-ID: <9253bc030807150522i4d1f6782oed0fe44571666093@mail.gmail.com>
+
+I'm using SPE 8.4c on Windows XP.
+
+Occasionally while editing, some part of my (left?) hand brushes some
+unknown key(s), and the SPE edit screen font size becomes only half as
+large.  Occasionally I can repeat this and make the fontsize even smaller.
+Restarting SPE restores the default fontsize.
+
+Is there a way to either prevent this from happening, or to restore the full
+fontsize once it has happened?
+
+Thanks!
+
+Gerry
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20080715/70765c4c/attachment.html>
+
+From spe.stani.be at gmail.com  Tue Jul 15 14:51:16 2008
+From: spe.stani.be at gmail.com (Stani)
+Date: Tue, 15 Jul 2008 14:51:16 +0200
+Subject: [spe-users] Question on zoom feature in Windows
+In-Reply-To: <9253bc030807150522i4d1f6782oed0fe44571666093@mail.gmail.com>
+References: <9253bc030807150522i4d1f6782oed0fe44571666093@mail.gmail.com>
+Message-ID: <2078a7ad0807150551o3d77f0e9md652c013ab63371c@mail.gmail.com>
+
+The shortcuts are Ctrl + and Ctrl - or Ctrl Mouse scrolling.
+
+On Tue, Jul 15, 2008 at 2:22 PM, Gerard Blais <gerard.blais at gmail.com> wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+>
+> I'm using SPE 8.4c on Windows XP.
+>
+> Occasionally while editing, some part of my (left?) hand brushes some unknown key(s), and the SPE edit screen font size becomes only half as large.  Occasionally I can repeat this and make the fontsize even smaller.  Restarting SPE restores the default fontsize.
+>
+> Is there a way to either prevent this from happening, or to restore the full fontsize once it has happened?
+>
+> Thanks!
+>
+> Gerry
+>
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+>
+
+
+
+-- 
+http://pythonide.stani.be
+
+
+From damien.boucard at tchoy.net  Fri Jul 25 10:54:50 2008
+From: damien.boucard at tchoy.net (Damien Boucard)
+Date: Fri, 25 Jul 2008 10:54:50 +0200 (CEST)
+Subject: [spe-users] SPE on Ubuntu Hardy
+Message-ID: <56884.157.159.80.40.1216976090.squirrel@webmail.tchoy.net>
+
+Hello,
+
+I have the bug #14106 described in [1]. Does anyone have the same problem
+? Does someone know a workaround for that ?
+
+Thank you,
+
+Damien.
+
+[1]
+https://developer.berlios.de/bugs/?func=detailbug&bug_id=14106&group_id=4161
+
+
+
+From mlacunza at gmail.com  Fri Jul 25 19:47:31 2008
+From: mlacunza at gmail.com (Mario Lacunza)
+Date: Fri, 25 Jul 2008 12:47:31 -0500
+Subject: [spe-users] SPE on Ubuntu Hardy
+In-Reply-To: <56884.157.159.80.40.1216976090.squirrel@webmail.tchoy.net>
+References: <56884.157.159.80.40.1216976090.squirrel@webmail.tchoy.net>
+Message-ID: <771741b20807251047v1ea3b902w989a644684d93cb4@mail.gmail.com>
+
+Hi,
+
+I dont have any bug, I use Ubuntu Hardy, Python 2,5 and wxPython 2.8.8.1
+
+
+
+2008/7/25 Damien Boucard <damien.boucard at tchoy.net>:
+
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+> Hello,
+>
+> I have the bug #14106 described in [1]. Does anyone have the same problem
+> ? Does someone know a workaround for that ?
+>
+> Thank you,
+>
+> Damien.
+>
+> [1]
+>
+> https://developer.berlios.de/bugs/?func=detailbug&bug_id=14106&group_id=4161
+>
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+
+
+
+-- 
+Saludos / Best regards
+
+Mario Lacunza
+Consultor de Sistemas - Webmaster
+
+Email: mlacunza [AT] gmail [DOT] com
+Lima - Peru
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20080725/ec8d436f/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Jul 25 20:36:43 2008
+From: spe.stani.be at gmail.com (Stani)
+Date: Fri, 25 Jul 2008 20:36:43 +0200
+Subject: [spe-users] SPE on Ubuntu Hardy
+In-Reply-To: <56884.157.159.80.40.1216976090.squirrel@webmail.tchoy.net>
+References: <56884.157.159.80.40.1216976090.squirrel@webmail.tchoy.net>
+Message-ID: <1217011003.10981.0.camel@blue>
+
+I am running Ubuntu myself. I can't reproduce your problem. Can you give
+some clear steps to reproduce what goes wrong/unexpected?
+Stani
+
+Op vrijdag 25-07-2008 om 10:54 uur [tijdzone +0200], schreef Damien
+Boucard:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Hello,
+> 
+> I have the bug #14106 described in [1]. Does anyone have the same problem
+> ? Does someone know a workaround for that ?
+> 
+> Thank you,
+> 
+> Damien.
+> 
+> [1]
+> https://developer.berlios.de/bugs/?func=detailbug&bug_id=14106&group_id=4161
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+

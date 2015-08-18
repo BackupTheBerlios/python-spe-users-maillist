@@ -1,0 +1,273 @@
+From diaasami at gmail.com  Sat Sep  1 03:20:15 2007
+From: diaasami at gmail.com (Diaa Sami)
+Date: Sat, 01 Sep 2007 04:20:15 +0300
+Subject: [spe-users] [Head,WinXP] Running fails
+In-Reply-To: <46D66C59.1070506@gmail.com>
+References: <fav8ou$6nv$1@sea.gmane.org> <46D66C59.1070506@gmail.com>
+Message-ID: <fbaeo9$sil$1@sea.gmane.org>
+
+Stani's Python Editor wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Hi Diaa Sami,
+> You're right. Windows users will be happy with this. I've just committed
+> this patch together with another small one. (On linux SPE will now save
+> backup files with ~ rather than .bak)
+> Thanks a lot!
+> Stani
+> 
+> Diaa Sami schreef:
+>> http://pythonide.stani.be
+>> http://pythonide.stani.be/manual/html/manual.html
+>> http://pythonide.stani.be/blog/sm_donate
+>> --
+>>
+>>
+>> I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+>> 2.6.4 Unicode.
+>> When I run the application, with or without parameters I get the following message in the output panel:
+>> C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+>> Script terminated.
+>>
+>> I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+>> as they're already added in info.path()
+>>
+>> Index: Parent.py
+>> ===================================================================
+>> --- Parent.py	(revision 243)
+>> +++ Parent.py	(working copy)
+>> @@ -689,7 +689,7 @@
+>>                                   'path':         path,
+>>                                   'arguments':    arguments,
+>>                                   'python':       info.PYTHON_EXEC}
+>> -            label = params['label'] = '"%(file)s" %(arguments)s'%params
+>> +            label = params['label'] = '%(file)s %(arguments)s'%params
+>>               os.chdir(path)
+>>               self.output.Execute("""%(python)s -u %(label)s"""%params,label=label,beep=beep)
+>>
+>>
+>> Regards,
+>> Diaa M. Sami
+>>
+>> _______________________________________________
+>> Python-spe-users mailing list
+>> Python-spe-users at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>>
+
+thanks, I'm glad my patch was accepted, there's another minor problem that SPE.pyw doesn't work(on 
+Windows too, of course), it needs the modification found below
+
+Index: SPE.pyw
+===================================================================
+--- SPE.pyw	(revision 243)
++++ SPE.pyw	(working copy)
+@@ -1,4 +1,4 @@
+  #!/usr/bin/env python
+  """Shortcut to launch spe in Windows."""
+  if __name__=='__main__':
+-    import _spe.SPE
++    import SPE
+
+DS
+
+
+
+From spe.stani.be at gmail.com  Sat Sep  1 14:57:09 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Sat, 01 Sep 2007 14:57:09 +0200
+Subject: [spe-users] [Head,WinXP] Running fails
+In-Reply-To: <fbaeo9$sil$1@sea.gmane.org>
+References: <fav8ou$6nv$1@sea.gmane.org> <46D66C59.1070506@gmail.com>
+	<fbaeo9$sil$1@sea.gmane.org>
+Message-ID: <46D961A5.10204@gmail.com>
+
+Hi Diaaa,
+I am afraid that I need more information, as probably this is a mistake.
+ Your spe files need to be in a '_spe' folder which should be on your
+python path. (Spe will insert the '_spe' path if it isn't in your
+pythonpath.) So my guess is that you renamed the '_spe' folder. Is that
+right?
+Stani
+
+Diaa Sami schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Stani's Python Editor wrote:
+>> http://pythonide.stani.be
+>> http://pythonide.stani.be/manual/html/manual.html
+>> http://pythonide.stani.be/blog/sm_donate
+>> --
+>>
+>>
+>> Hi Diaa Sami,
+>> You're right. Windows users will be happy with this. I've just committed
+>> this patch together with another small one. (On linux SPE will now save
+>> backup files with ~ rather than .bak)
+>> Thanks a lot!
+>> Stani
+>>
+>> Diaa Sami schreef:
+>>> http://pythonide.stani.be
+>>> http://pythonide.stani.be/manual/html/manual.html
+>>> http://pythonide.stani.be/blog/sm_donate
+>>> --
+>>>
+>>>
+>>> I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+>>> 2.6.4 Unicode.
+>>> When I run the application, with or without parameters I get the following message in the output panel:
+>>> C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+>>> Script terminated.
+>>>
+>>> I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+>>> as they're already added in info.path()
+>>>
+>>> Index: Parent.py
+>>> ===================================================================
+>>> --- Parent.py	(revision 243)
+>>> +++ Parent.py	(working copy)
+>>> @@ -689,7 +689,7 @@
+>>>                                   'path':         path,
+>>>                                   'arguments':    arguments,
+>>>                                   'python':       info.PYTHON_EXEC}
+>>> -            label = params['label'] = '"%(file)s" %(arguments)s'%params
+>>> +            label = params['label'] = '%(file)s %(arguments)s'%params
+>>>               os.chdir(path)
+>>>               self.output.Execute("""%(python)s -u %(label)s"""%params,label=label,beep=beep)
+>>>
+>>>
+>>> Regards,
+>>> Diaa M. Sami
+>>>
+>>> _______________________________________________
+>>> Python-spe-users mailing list
+>>> Python-spe-users at lists.berlios.de
+>>> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>>>
+> 
+> thanks, I'm glad my patch was accepted, there's another minor problem that SPE.pyw doesn't work(on 
+> Windows too, of course), it needs the modification found below
+> 
+> Index: SPE.pyw
+> ===================================================================
+> --- SPE.pyw	(revision 243)
+> +++ SPE.pyw	(working copy)
+> @@ -1,4 +1,4 @@
+>   #!/usr/bin/env python
+>   """Shortcut to launch spe in Windows."""
+>   if __name__=='__main__':
+> -    import _spe.SPE
+> +    import SPE
+> 
+> DS
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+
+
+
+From diaasami at gmail.com  Sun Sep  2 00:23:00 2007
+From: diaasami at gmail.com (Diaa Sami)
+Date: Sun, 02 Sep 2007 01:23:00 +0300
+Subject: [spe-users] [Head,WinXP] Running fails
+In-Reply-To: <46D961A5.10204@gmail.com>
+References: <fav8ou$6nv$1@sea.gmane.org>
+	<46D66C59.1070506@gmail.com>	<fbaeo9$sil$1@sea.gmane.org>
+	<46D961A5.10204@gmail.com>
+Message-ID: <fbcook$g9i$1@sea.gmane.org>
+
+Stani's Python Editor wrote:
+> 
+> Hi Diaaa,
+> I am afraid that I need more information, as probably this is a mistake.
+>  Your spe files need to be in a '_spe' folder which should be on your
+> python path. (Spe will insert the '_spe' path if it isn't in your
+> pythonpath.) So my guess is that you renamed the '_spe' folder. Is that
+> right?
+> Stani
+> 
+
+well, no the folder name is correct, but I didn't know that it should be added to python path, it 
+worked now... my point is that SPE.py works out of the box, but SPE.pyw doesn't.
+
+ > (Spe will insert the '_spe' path if it isn't in your
+ > pythonpath.)
+
+I'm now sure how can SPE insert it if it can't run in the first place.
+
+-- 
+Diaa
+
+
+
+From spe.stani.be at gmail.com  Sun Sep  2 18:46:36 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Sun, 02 Sep 2007 18:46:36 +0200
+Subject: [spe-users] [Head,WinXP] Running fails
+In-Reply-To: <fbcook$g9i$1@sea.gmane.org>
+References: <fav8ou$6nv$1@sea.gmane.org>	<46D66C59.1070506@gmail.com>	<fbaeo9$sil$1@sea.gmane.org>	<46D961A5.10204@gmail.com>
+	<fbcook$g9i$1@sea.gmane.org>
+Message-ID: <46DAE8EC.8000402@gmail.com>
+
+Diaa Sami schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Stani's Python Editor wrote:
+>> Hi Diaaa,
+>> I am afraid that I need more information, as probably this is a mistake.
+>>  Your spe files need to be in a '_spe' folder which should be on your
+>> python path. (Spe will insert the '_spe' path if it isn't in your
+>> pythonpath.) So my guess is that you renamed the '_spe' folder. Is that
+>> right?
+>> Stani
+>>
+> 
+> well, no the folder name is correct, but I didn't know that it should be added to python path, it 
+> worked now... my point is that SPE.py works out of the box, but SPE.pyw doesn't.
+> 
+>  > (Spe will insert the '_spe' path if it isn't in your
+>  > pythonpath.)
+> 
+> I'm now sure how can SPE insert it if it can't run in the first place.
+> 
+You're right. I've accepted your patch and applied it to subversion.
+Keep them coming!
+Thanks,
+Stani
+
+
+From spe.stani.be at gmail.com  Sun Sep  2 20:47:00 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Sun, 02 Sep 2007 20:47:00 +0200
+Subject: [spe-users] Winpdb 1.2.2, wxGlade0.6 & XRCed 0.1.8-5...
+In-Reply-To: <90cae1530705301135y543a483bk602fa6f930df19d1@mail.gmail.com>
+References: <90cae1530705301135y543a483bk602fa6f930df19d1@mail.gmail.com>
+Message-ID: <46DB0524.5010800@gmail.com>
+
+...all landed in subversion (rev255). wxGlade and XRCed are taken from
+their repositories, so they might be bleeding edge. Thanks to Diaa Sami
+some issues on Windows are fixed (eg running files with spaces). Check
+out the new SPE in the usual way:
+
+    svn checkout svn://svn.berlios.de/python/spe/trunk/_spe
+
+Enjoy,
+Stani
+
+

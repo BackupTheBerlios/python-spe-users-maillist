@@ -1,0 +1,18 @@
+From yaoyansi2 at yahoo.cn  Mon Dec  5 10:05:37 2011
+From: yaoyansi2 at yahoo.cn (Yansi Yao)
+Date: Mon, 5 Dec 2011 17:05:37 +0800 (CST)
+Subject: [spe-users] [SPE]How to install SPE for Blender2.6?
+Message-ID: <1323075937.317.YahooMailNeo@web15708.mail.cnb.yahoo.com>
+
+Hi all,
+I'm new to SPE, and thank you for providing such a GREAT debugger for Blender!
+I read the spe tutorial for blender(http://wiki.blender.org/index.php/Doc:2.4/Tutorials/Extensions/Python/Editors/SPE),
+but the problem is that tutorial is for blender2.4. When I followed the tutorial and install spe for Blender2.6, I found that Blender2.6 use Python3.2, but wxPython doesn't provide the package for python3.2.
+So could you give me a guide on how to install spe for Blender2.6? Thank you.
+
+Regards
+yaoyansi
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20111205/98da3e0f/attachment.html>
+

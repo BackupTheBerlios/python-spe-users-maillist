@@ -1,0 +1,224 @@
+From raboliot at gmail.com  Wed Sep 17 21:32:02 2008
+From: raboliot at gmail.com (Webmaster free2iphone)
+Date: Wed, 17 Sep 2008 21:32:02 +0200
+Subject: [spe-users] Don't have space key on my keyboard with SPE
+Message-ID: <d7aed4f0809171232h23eb704audb95d53529242d3a@mail.gmail.com>
+
+Hello !
+
+I have issue with SPE Ubuntu Hardy revision and SVN revision :
+
+I don't have space character ! I type it on my keyboard with no effect.
+
+Hardware : Logitech Di Novo keyboard with Ubuntu 8.04 x64.
+
+Tested on  spe ubuntu version and SVN version.
+
+I have some debug info  from the SVN version :
+
+Best regards,
+
+Program info
+Spe version
+0.8.4.i
+Python version
+2.5.2  (2.3 required)
+wxPython version
+2.8.7.1  (2.6.1.0. required)
+
+Spe location
+/home/me/_spe
+Sm location
+/home/me/_spe/sm
+User path
+/home/me/.spe
+
+bhubert at vintage:~$ ./_spe/SPE.py --debug
+
+SPE v0.8.4.i (c)2003-2008 www.stani.be
+
+If spe fails to start:
+ - type "python SPE.py --debug > debug.txt 2>&1" at the command prompt
+   (or if you use tcsh: "python SPE.py --debug >& debug.txt")
+ - send debug.txt with some info to spe.stani.be[at]gmail.com
+
+Blender support disabled (run SPE inside Blender to enable).
+Encrypted debugging enabled.
+
+Spe is running in debugging mode with this configuration:
+- platform  : linux2
+- python    : 2.5.2
+- wxPython  : 2.8.7.1
+- interface : multiple with sash & tabs (linux)
+- encoding  : UTF-8
+
+Launching application...
+Create: Mdi:   <class 'sm.wxp.smdi.MdiSashParentFrame'>.tabs
+Create: Framework: menu.
+Create: Framework: toolbar.
+Create: Framework: statusbar.
+Creating tabs...
+    Shell
+    Locals
+    Session
+    Output
+    Find
+    Browser
+    Recent
+    Todo
+    Index
+    Notes
+    Donate
+Create: Mdi: <class 'sm.wxp.smdi.MdiChildFrame'>
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Activate(True)
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Activate(True)
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Size
+Event:  Parent: <class 'Parent.Panel'>.onSize
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Activate(True)
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Size
+Event:  Parent: <class 'Parent.Panel'>.onSize
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event>: Framework: <class 'sm.wxp.smdi.MdiChildFrame'>.Size
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+
+** (python:7229): WARNING **: Can't create printer "PDF" because the id
+"PDF" is already used
+
+(python:7229): GnomePrintCupsPlugin-WARNING **: The CUPS printer PDF could
+not be created
+
+
+(python:7229): GnomePrintCupsPlugin-WARNING **: The data for the CUPS
+printer PDF could not be loaded.
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+
+---- # Comment  : Starting typing space key
+
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event:  Parent: <class 'Parent.Panel'>.onActivate
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(True)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Child: unnamed: <class 'Child.Panel'>.onKillFocus(dead=False)
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Activate(False)
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event<: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+Event:  Parent: <class 'Parent.Panel'>.onMove
+Event>: Framework: <class 'sm.wxp.smdi.MdiSashParentFrame'>.Move
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20080917/847413bf/attachment.html>
+

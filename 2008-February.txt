@@ -1,0 +1,36 @@
+From s.mientki at ru.nl  Sat Feb 16 12:27:46 2008
+From: s.mientki at ru.nl (Stef Mientki)
+Date: Sat, 16 Feb 2008 12:27:46 +0100
+Subject: [spe-users] editor doesn't accept keystrokes ?
+Message-ID: <47B6C8B2.3040206@ru.nl>
+
+hello,
+
+I just tried to install SPE (at this moment I'm using PyScripter),
+and I've to admit that it looks very good.
+Certainly the fact that it's completely written in Python is very 
+attractive,
+especially because my programs needs the same technics as SPE uses ;-)
+
+Now I noticed that it needs wxPython 2.6,
+and I need wxPython 2.8 ;-)
+I previous had both wxPython 2.6 and 2.8 installed,
+but due to problems I had to remove the 2.6 version.
+
+Now I get the following error when typing in the editor:
+Traceback (most recent call last):
+  File 
+"P:\Python\lib\site-packages\spe-0.8.3.a-py2.4.egg\_spe\sm\wxp\stc.py", 
+line 208, in OnKeyDown
+    key     = event.KeyCode()
+TypeError: 'int' object is not callable
+
+Is there a simple way to solve this ?
+Is it simple to install also wxPython 2.6 (without disturbing 2.8) and 
+will that solve the problem ?
+Are there any plans to move SPE to wxPython 2.8 ?
+
+thanks,
+Stef Mientki
+
+

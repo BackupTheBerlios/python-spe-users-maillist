@@ -1,0 +1,20 @@
+From luqsim at googlemail.com  Thu Apr  8 14:45:36 2010
+From: luqsim at googlemail.com (Simon Lu)
+Date: Thu, 8 Apr 2010 14:45:36 +0200
+Subject: [spe-users] backwards search
+Message-ID: <y2kf1422e941004080545ha979db86hfcbbb12d7491f8ac@mail.gmail.com>
+
+Hello everyone,
+
+I am new user of SPE editor. As I tried around the application
+yesterday, I noticed a problem: when I try to find some key words
+using the Find/Replace dialog (ctrl + f). I can't search backwards.
+The option is there, but it's disabled.  Since I can get any useful
+information using Google, perhaps someone here can help me out! I
+really appreciate.
+
+thanks
+
+Simon
+
+

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py	install&quot;	don't work
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-users/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BPatch%5D%20%22setup.py%20sdist%22%20and%20%22setup.py%0A%09install%22%09don%27t%20work&In-Reply-To=%3C1214667833.26856.5.camel%40blue%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000034.html">
+   <LINK REL="Next"  HREF="000036.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py	install&quot;	don't work</H1>
+    <B>Stani</B> 
+    <A HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BPatch%5D%20%22setup.py%20sdist%22%20and%20%22setup.py%0A%09install%22%09don%27t%20work&In-Reply-To=%3C1214667833.26856.5.camel%40blue%3E"
+       TITLE="[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py	install&quot;	don't work">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Sat Jun 28 17:43:53 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000034.html">[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py install&quot; don't	work
+</A></li>
+        <LI>Next message: <A HREF="000036.html">[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py install&quot; don't work
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#35">[ date ]</a>
+              <a href="thread.html#35">[ thread ]</a>
+              <a href="subject.html#35">[ subject ]</a>
+              <a href="author.html#35">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jason,
+Thanks for your will to contribute. &#65279;Are you on Windows? The setup.py
+was included for linux installations, which do not install the plugins
+from the SPE package so that is why they are not in the manifesto.
+(wxglade, kiki, winpdb are installed by their own packages.) To make it
+easy for Windows, where there is no packaging system, I decided to
+include them inside the SPE source tree.
+SPE can be used by just unzipping and running SPE.py. There is no need
+for it to be in the site-packages path as it is not a library but an
+application. Is there specific reason why you want to install spe with
+setup.py? 
+Best regards,
+Stani
+
+Op vrijdag 27-06-2008 om 07:39 uur [tijdzone -0700], schreef Jason
+Kankiewicz:
+&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A>
+</I>&gt;<i> --
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> The top level &quot;spe&quot; directory is missing a manifest template so the 
+</I>&gt;<i> generated source distribution is missing a lot of files. It's also 
+</I>&gt;<i> missing a version number specification so it's named &quot;spe-0.0.0&quot;.
+</I>&gt;<i> 
+</I>&gt;<i> The distutils script is missing package and package data items for the 
+</I>&gt;<i> plugins so they don't get installed.
+</I>&gt;<i> 
+</I>&gt;<i> The attached patch is against r346.
+</I>&gt;<i> platte tekst-document bijlage (spe_sdist_install.patch)
+</I>&gt;<i> Index: MANIFEST.in
+</I>&gt;<i> ===================================================================
+</I>&gt;<i> --- MANIFEST.in	(revision 0)
+</I>&gt;<i> +++ MANIFEST.in	(revision 0)
+</I>&gt;<i> @@ -0,0 +1,9 @@
+</I>&gt;<i> +include COPYING MANIFEST* NEWS *.desktop *.sgml
+</I>&gt;<i> +include _spe/plugins/winpdb/PKG-INFO
+</I>&gt;<i> +include _spe/plugins/winpdb/rpdb2
+</I>&gt;<i> +include _spe/plugins/winpdb/winpdb
+</I>&gt;<i> +include _spe/plugins/wxGlade/Makefile
+</I>&gt;<i> +include _spe/plugins/wxGlade/wxglade
+</I>&gt;<i> +include _spe/plugins/XRCed/sawfishrc
+</I>&gt;<i> +recursive-include _spe *.ad *.bat *.blend *.cfg *.conf *.dwg *.gif *.htm *.html *.ico *.jpg *.mo *.png *.po *.pot *.py *.pyw *.sh *.spec *.svg *.txt *.wgt *.wmf *.wxg *.xpm *.xrc
+</I>&gt;<i> +global-exclude .svn/*
+</I>&gt;<i> Index: setup.py
+</I>&gt;<i> ===================================================================
+</I>&gt;<i> --- setup.py	(revision 346)
+</I>&gt;<i> +++ setup.py	(working copy)
+</I>&gt;<i> @@ -1,15 +1,143 @@
+</I>&gt;<i>  #/usr/bin/python
+</I>&gt;<i>  from distutils.core import setup
+</I>&gt;<i> +from _spe.info import INFO
+</I>&gt;<i>  
+</I>&gt;<i>  setup(name          = &quot;spe&quot;,
+</I>&gt;<i> -      description   = &quot;&quot;&quot;Python IDE with UML, PyChecker Source Code Doctor, WinPdb Debugger, wxGlade and XRCed GUI designers and Blender support.&quot;&quot;&quot;,
+</I>&gt;<i> -      author        = &quot;www.stani.be&quot;,
+</I>&gt;<i> -      author_email  = &quot;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">spe.stani.be at gmail.com</A>&quot;,
+</I>&gt;<i> -      url           = &quot;<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>&quot;,
+</I>&gt;<i> -      license       = &quot;GPL&quot;,
+</I>&gt;<i> -      scripts       = ['_spe/spe'],
+</I>&gt;<i> -      packages      = ['_spe', '_spe.dialogs', '_spe.examples', '_spe.plugins', '_spe.shortcuts', '_spe.sidebar',
+</I>&gt;<i> -                       '_spe.skins', '_spe.sm', '_spe.tabs', '_spe.view', '_spe.skins.default', '_spe.sm.wxp'],
+</I>&gt;<i> -      package_data  = {'_spe': ['defaults.cfg', 'doc/donate.html', 'doc/about.htm', 'skins/default/*', 'images/*']}
+</I>&gt;<i> +    description   = &quot;&quot;&quot;Python IDE with UML, PyChecker Source Code Doctor, WinPdb Debugger, wxGlade and XRCed GUI designers and Blender support.&quot;&quot;&quot;,
+</I>&gt;<i> +    author        = &quot;www.stani.be&quot;,
+</I>&gt;<i> +    author_email  = &quot;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">spe.stani.be at gmail.com</A>&quot;,
+</I>&gt;<i> +    url           = &quot;<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>&quot;,
+</I>&gt;<i> +    license       = &quot;GPL&quot;,
+</I>&gt;<i> +    scripts       = ['_spe/spe'],
+</I>&gt;<i> +    packages      = [
+</I>&gt;<i> +        '_spe',
+</I>&gt;<i> +        '_spe.dialogs',
+</I>&gt;<i> +        '_spe.examples',
+</I>&gt;<i> +        '_spe.plugins',
+</I>&gt;<i> +        '_spe.plugins.kiki',
+</I>&gt;<i> +        '_spe.plugins.pychecker',
+</I>&gt;<i> +        '_spe.plugins.pychecker2',
+</I>&gt;<i> +        '_spe.plugins.winpdb',
+</I>&gt;<i> +        '_spe.plugins.wxGlade',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.edit_sizers',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.bitmap_button',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.button',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.calendar_ctrl',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.checkbox',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.choice',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.combo_box',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.custom_widget',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.datepicker_ctrl',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.dialog',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.frame',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.gauge',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.grid',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.list_box',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.list_ctrl',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.menubar',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.notebook',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.panel',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.radio_box',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.radio_button',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.slider',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.spacer',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.spin_button',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.spin_ctrl',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.splitter_window',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.static_bitmap',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.static_line',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.static_text',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.text_ctrl',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.toggle_button',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.toolbar',
+</I>&gt;<i> +        '_spe.plugins.wxGlade.widgets.tree_ctrl',
+</I>&gt;<i> +        '_spe.plugins.XRCed',
+</I>&gt;<i> +        '_spe.shortcuts',
+</I>&gt;<i> +        '_spe.sidebar',
+</I>&gt;<i> +        '_spe.skins',
+</I>&gt;<i> +        '_spe.sm',
+</I>&gt;<i> +        '_spe.tabs',
+</I>&gt;<i> +        '_spe.view',
+</I>&gt;<i> +        '_spe.skins.default',
+</I>&gt;<i> +        '_spe.sm.wxp',
+</I>&gt;<i> +    ],
+</I>&gt;<i> +    package_data  = {
+</I>&gt;<i> +        '_spe': [
+</I>&gt;<i> +            'spe',
+</I>&gt;<i> +            '*.blend',
+</I>&gt;<i> +            '*.dwg',
+</I>&gt;<i> +            '*.pyw',
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +            '*.wmf',
+</I>&gt;<i> +            '*.wxg',
+</I>&gt;<i> +            'defaults.cfg',
+</I>&gt;<i> +            'dialogs/*.wxg',
+</I>&gt;<i> +            'dialogs/*.txt',
+</I>&gt;<i> +            'doc/donate.html',
+</I>&gt;<i> +            'doc/about.htm',
+</I>&gt;<i> +            'doc/*.py',
+</I>&gt;<i> +            'examples/*.txt',
+</I>&gt;<i> +            'skins/*.jpg',
+</I>&gt;<i> +            'skins/default/*',
+</I>&gt;<i> +            'tabs/*.wxg',
+</I>&gt;<i> +            'test/*.py',
+</I>&gt;<i> +            'test/*.wxg',
+</I>&gt;<i> +            'images/*'
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.pychecker': [
+</I>&gt;<i> +            '*.ad',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.pychecker2': [
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.kiki': [
+</I>&gt;<i> +            '*.bat',
+</I>&gt;<i> +            '*.ico',
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +            '*.wxg',
+</I>&gt;<i> +            'docs/*.html',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.winpdb': [
+</I>&gt;<i> +            'PKG-INFO',
+</I>&gt;<i> +            'rpdb2',
+</I>&gt;<i> +            'winpdb',
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +            'artwork/*.png',
+</I>&gt;<i> +            'artwork/*.svg',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.wxGlade': [
+</I>&gt;<i> +            'Makefile',
+</I>&gt;<i> +            'wxglade',
+</I>&gt;<i> +            '*.conf',
+</I>&gt;<i> +            '*.pyw',
+</I>&gt;<i> +            '*.spec',
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +            'codegen/*.py',
+</I>&gt;<i> +            'icons/*.ico',
+</I>&gt;<i> +            'icons/*.png',
+</I>&gt;<i> +            'icons/*.xpm',
+</I>&gt;<i> +            'icons/gtk/*.xpm',
+</I>&gt;<i> +            'icons/msw/*.xpm',
+</I>&gt;<i> +            'locale/en/LC_MESSAGES/*.mo',
+</I>&gt;<i> +            'locale/it/LC_MESSAGES/*.mo',
+</I>&gt;<i> +            'locale/ja/LC_MESSAGES/*.mo',
+</I>&gt;<i> +            'po/*.po',
+</I>&gt;<i> +            'po/*.pot',
+</I>&gt;<i> +            'res/*.wxg',
+</I>&gt;<i> +            'templates/*.wgt',
+</I>&gt;<i> +            'widgets/*.txt',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +        '_spe.plugins.XRCed': [
+</I>&gt;<i> +            'sawfishrc',
+</I>&gt;<i> +            '*.ico',
+</I>&gt;<i> +            '*.png',
+</I>&gt;<i> +            '*.sh',
+</I>&gt;<i> +            '*.txt',
+</I>&gt;<i> +            '*.xrc',
+</I>&gt;<i> +            'src-images/*.png',
+</I>&gt;<i> +        ],
+</I>&gt;<i> +    },
+</I>&gt;<i> +    version = INFO[&quot;version&quot;],
+</I>&gt;<i>  )
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Python-spe-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">Python-spe-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">https://lists.berlios.de/mailman/listinfo/python-spe-users</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000034.html">[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py install&quot; don't	work
+</A></li>
+	<LI>Next message: <A HREF="000036.html">[spe-users] [Patch] &quot;setup.py sdist&quot; and &quot;setup.py install&quot; don't work
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#35">[ date ]</a>
+              <a href="thread.html#35">[ thread ]</a>
+              <a href="subject.html#35">[ subject ]</a>
+              <a href="author.html#35">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-users">More information about the Python-spe-users
+mailing list</a><br>
+</body></html>

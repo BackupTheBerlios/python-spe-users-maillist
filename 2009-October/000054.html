@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-users] SPE and iPython - a solution
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-users/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20SPE%20and%20iPython%20-%20a%20solution&In-Reply-To=%3C4AE6BFAD.4080707%40sil.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000053.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-users] SPE and iPython - a solution</H1>
+    <B>Timothy W. Grove</B> 
+    <A HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20SPE%20and%20iPython%20-%20a%20solution&In-Reply-To=%3C4AE6BFAD.4080707%40sil.org%3E"
+       TITLE="[spe-users] SPE and iPython - a solution">tim_grove at sil.org
+       </A><BR>
+    <I>Tue Oct 27 10:38:53 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000053.html">[spe-users] [Fwd: noob Q: cannot get spe to run scripts in	ubuntu 9.04]
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I've just started to experiment with using iPython 
+(<A HREF="http://ipython.scipy.org/moin/">http://ipython.scipy.org/moin/</A>) and wondered how it could be integrated 
+into SPE (<A HREF="http://pythonide.stani.be/">http://pythonide.stani.be/</A>). I found a few threads about it, 
+but no solutions, so I started digging around in Stani's code and came 
+up with the following solution for starters. This doesn't (yet) offer 
+any other functionality from SPE, such as importing a script into the 
+iPython shell or drag-and-drop of files onto the panel for execution, 
+but it should add an extra panel to SPE containing an iPython shell. I'm 
+working under Windows Vista with Python 2.6 and wxPython 2.8, using 
+ipython-0.10. Hope this might help someone else.
+
+Best regards,
+Timothy Grove
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# IP_Shell.py - version 0.1.0
+
+from IPython.gui.wx.ipython_view import IPShellWidget
+
+class Panel(IPShellWidget):
+    &quot;&quot;&quot;
+    A simple class to add an iPython panel to SPE.
+
+    To use:
+    1. Create a file with this code, named 'IP_Shell.py', and add it to 
+\_spe\tabs\.
+    2. Duplicate 'shell.png' in \_spe\skins\default\ and rename it to 
+'ip_shell.png' .
+    3. Edit 'Parent.py' in \_spe\. Change 'TABS = ['Shell','Locals', 
+...]' (line 44 in my editor) to
+                                          'TABS = 
+['Shell','IP_Shell','Locals', ...]'.
+    &quot;&quot;&quot;
+
+    def __init__(self,panel):
+        IPShellWidget.__init__(self, panel)
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000053.html">[spe-users] [Fwd: noob Q: cannot get spe to run scripts in	ubuntu 9.04]
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-users">More information about the Python-spe-users
+mailing list</a><br>
+</body></html>

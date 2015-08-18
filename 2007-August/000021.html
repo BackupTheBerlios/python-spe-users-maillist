@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-users] [Head,WinXP] Running fails
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-users/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BHead%2CWinXP%5D%20Running%20fails&In-Reply-To=%3C46D66C59.1070506%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000020.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-users] [Head,WinXP] Running fails</H1>
+    <B>Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BHead%2CWinXP%5D%20Running%20fails&In-Reply-To=%3C46D66C59.1070506%40gmail.com%3E"
+       TITLE="[spe-users] [Head,WinXP] Running fails">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Thu Aug 30 09:06:01 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000020.html">[spe-users] [Head,WinXP] Running fails
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Diaa Sami,
+You're right. Windows users will be happy with this. I've just committed
+this patch together with another small one. (On linux SPE will now save
+backup files with ~ rather than .bak)
+Thanks a lot!
+Stani
+
+Diaa Sami schreef:
+&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A>
+</I>&gt;<i> --
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+</I>&gt;<i> 2.6.4 Unicode.
+</I>&gt;<i> When I run the application, with or without parameters I get the following message in the output panel:
+</I>&gt;<i> C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+</I>&gt;<i> Script terminated.
+</I>&gt;<i> 
+</I>&gt;<i> I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+</I>&gt;<i> as they're already added in info.path()
+</I>&gt;<i> 
+</I>&gt;<i> Index: Parent.py
+</I>&gt;<i> ===================================================================
+</I>&gt;<i> --- Parent.py	(revision 243)
+</I>&gt;<i> +++ Parent.py	(working copy)
+</I>&gt;<i> @@ -689,7 +689,7 @@
+</I>&gt;<i>                                   'path':         path,
+</I>&gt;<i>                                   'arguments':    arguments,
+</I>&gt;<i>                                   'python':       info.PYTHON_EXEC}
+</I>&gt;<i> -            label = params['label'] = '&quot;%(file)s&quot; %(arguments)s'%params
+</I>&gt;<i> +            label = params['label'] = '%(file)s %(arguments)s'%params
+</I>&gt;<i>               os.chdir(path)
+</I>&gt;<i>               self.output.Execute(&quot;&quot;&quot;%(python)s -u %(label)s&quot;&quot;&quot;%params,label=label,beep=beep)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> Diaa M. Sami
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Python-spe-users mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">Python-spe-users at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">https://lists.berlios.de/mailman/listinfo/python-spe-users</A>
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000020.html">[spe-users] [Head,WinXP] Running fails
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-users">More information about the Python-spe-users
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,9 @@
+From lawrence.gray at zing-net.ca  Tue Oct 14 21:58:55 2008
+From: lawrence.gray at zing-net.ca (Lawrence Gray)
+Date: Tue, 14 Oct 2008 15:58:55 -0400
+Subject: [spe-users] Run Arguments
+Message-ID: <48F4F9FF.3040702@zing-net.ca>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20081014/695f0c4e/attachment.html>
+

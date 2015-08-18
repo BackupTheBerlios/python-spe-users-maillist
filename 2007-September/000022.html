@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-users] [Head,WinXP] Running fails
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-users/2007-September/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BHead%2CWinXP%5D%20Running%20fails&In-Reply-To=%3Cfbaeo9%24sil%241%40sea.gmane.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000023.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-users] [Head,WinXP] Running fails</H1>
+    <B>Diaa Sami</B> 
+    <A HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20%5BHead%2CWinXP%5D%20Running%20fails&In-Reply-To=%3Cfbaeo9%24sil%241%40sea.gmane.org%3E"
+       TITLE="[spe-users] [Head,WinXP] Running fails">diaasami at gmail.com
+       </A><BR>
+    <I>Sat Sep  1 03:20:15 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000023.html">[spe-users] [Head,WinXP] Running fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Stani's Python Editor wrote:
+&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A>
+</I>&gt;<i> --
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Hi Diaa Sami,
+</I>&gt;<i> You're right. Windows users will be happy with this. I've just committed
+</I>&gt;<i> this patch together with another small one. (On linux SPE will now save
+</I>&gt;<i> backup files with ~ rather than .bak)
+</I>&gt;<i> Thanks a lot!
+</I>&gt;<i> Stani
+</I>&gt;<i> 
+</I>&gt;<i> Diaa Sami schreef:
+</I>&gt;&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+</I>&gt;&gt;<i> 2.6.4 Unicode.
+</I>&gt;&gt;<i> When I run the application, with or without parameters I get the following message in the output panel:
+</I>&gt;&gt;<i> C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+</I>&gt;&gt;<i> Script terminated.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+</I>&gt;&gt;<i> as they're already added in info.path()
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Index: Parent.py
+</I>&gt;&gt;<i> ===================================================================
+</I>&gt;&gt;<i> --- Parent.py	(revision 243)
+</I>&gt;&gt;<i> +++ Parent.py	(working copy)
+</I>&gt;&gt;<i> @@ -689,7 +689,7 @@
+</I>&gt;&gt;<i>                                   'path':         path,
+</I>&gt;&gt;<i>                                   'arguments':    arguments,
+</I>&gt;&gt;<i>                                   'python':       info.PYTHON_EXEC}
+</I>&gt;&gt;<i> -            label = params['label'] = '&quot;%(file)s&quot; %(arguments)s'%params
+</I>&gt;&gt;<i> +            label = params['label'] = '%(file)s %(arguments)s'%params
+</I>&gt;&gt;<i>               os.chdir(path)
+</I>&gt;&gt;<i>               self.output.Execute(&quot;&quot;&quot;%(python)s -u %(label)s&quot;&quot;&quot;%params,label=label,beep=beep)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Regards,
+</I>&gt;&gt;<i> Diaa M. Sami
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> Python-spe-users mailing list
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">Python-spe-users at lists.berlios.de</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-users">https://lists.berlios.de/mailman/listinfo/python-spe-users</A>
+</I>&gt;&gt;<i>
+</I>
+thanks, I'm glad my patch was accepted, there's another minor problem that SPE.pyw doesn't work(on 
+Windows too, of course), it needs the modification found below
+
+Index: SPE.pyw
+===================================================================
+--- SPE.pyw	(revision 243)
++++ SPE.pyw	(working copy)
+@@ -1,4 +1,4 @@
+  #!/usr/bin/env python
+  &quot;&quot;&quot;Shortcut to launch spe in Windows.&quot;&quot;&quot;
+  if __name__=='__main__':
+-    import _spe.SPE
++    import SPE
+
+DS
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000023.html">[spe-users] [Head,WinXP] Running fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-users">More information about the Python-spe-users
+mailing list</a><br>
+</body></html>

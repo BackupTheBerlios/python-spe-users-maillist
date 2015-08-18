@@ -1,0 +1,213 @@
+From benjamin.harling at hotmail.com  Mon Apr  9 15:16:20 2007
+From: benjamin.harling at hotmail.com (Ben Harling)
+Date: Mon, 09 Apr 2007 14:16:20 +0100
+Subject: [spe-users] Messed up the install on WinXP, help!
+Message-ID: <BAY115-F1688CC1E4D3ADDED0B98A09E590@phx.gbl>
+
+Hi,
+
+I've installed the latest SPE via SVN, along with upgrading to python2.5 at 
+the same time. Of course, I forgot to uninstall SPE beforehand like a fool, 
+and consequently have got some problems.
+
+1. shell extension not working now, 'Edit with SPE' in the right-click just 
+throws up an 'Open With .. ' menu, with python.exe hilighted.
+
+2. Can't run some scripts from within SPE. Some work when I press 'F9', but 
+others do nothing except print 'script terminated' in the output window. The 
+same scripts worked before in the last SPE i had. The only way I can get 
+these to run is through pressing 'SHIFT-F9' to run in a terminal window, 
+which obviously means no nice traceback in the output window.
+
+I've removed the _spe folder from my python 2.4 installation, downloaded the 
+SVN version to python25/lib/site-packages/. I still have python2.4 
+installed, but 2.5 is now the default.
+
+any help greatly appreciated cos I really like SPE!
+
+_________________________________________________________________
+Txt a lot? Get Messenger FREE on your mobile. 
+https://livemessenger.mobile.uk.msn.com/
+
+
+
+From spe.stani.be at gmail.com  Sun Apr 15 01:24:50 2007
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sat, 14 Apr 2007 18:24:50 -0500
+Subject: [spe-users] Messed up the install on WinXP, help!
+In-Reply-To: <BAY115-F1688CC1E4D3ADDED0B98A09E590@phx.gbl>
+References: <BAY115-F1688CC1E4D3ADDED0B98A09E590@phx.gbl>
+Message-ID: <2078a7ad0704141624n1ec7d269t587c154df35481d1@mail.gmail.com>
+
+You should have uninstalled SPE properly. If you still find python-spe
+in Control Panel>Add/Remove programs, try to uninstall it.
+Stani
+
+On 4/9/07, Ben Harling <benjamin.harling at hotmail.com> wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+> Hi,
+>
+> I've installed the latest SPE via SVN, along with upgrading to python2.5 at
+> the same time. Of course, I forgot to uninstall SPE beforehand like a fool,
+> and consequently have got some problems.
+>
+> 1. shell extension not working now, 'Edit with SPE' in the right-click just
+> throws up an 'Open With .. ' menu, with python.exe hilighted.
+>
+> 2. Can't run some scripts from within SPE. Some work when I press 'F9', but
+> others do nothing except print 'script terminated' in the output window. The
+> same scripts worked before in the last SPE i had. The only way I can get
+> these to run is through pressing 'SHIFT-F9' to run in a terminal window,
+> which obviously means no nice traceback in the output window.
+>
+> I've removed the _spe folder from my python 2.4 installation, downloaded the
+> SVN version to python25/lib/site-packages/. I still have python2.4
+> installed, but 2.5 is now the default.
+>
+> any help greatly appreciated cos I really like SPE!
+>
+> _________________________________________________________________
+> Txt a lot? Get Messenger FREE on your mobile.
+> https://livemessenger.mobile.uk.msn.com/
+>
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+
+
+-- 
+http://pythonide.stani.be
+
+
+From ajlouder at yahoo.com  Tue Apr 17 22:09:23 2007
+From: ajlouder at yahoo.com (Andrew Louder)
+Date: Tue, 17 Apr 2007 13:09:23 -0700 (PDT)
+Subject: [spe-users] SPE with cygwin
+Message-ID: <633357.15741.qm@web34801.mail.mud.yahoo.com>
+
+To whom it may concern:
+   
+      I would like to try SPE with Cygwin.  Which installation instuctions should I follow?
+   
+  >    0.8.3 2006-10-19 06:00 
+> SPE-0.8.3.c-wx2.6.1.0-no_setup.zip
+> SPE-0.8.3.c-wx2.6.1.0-py24.exe
+> SPE-0.8.3.c-wx2.6.1.0.tar.gz
+
+      Should I download extract the "SPE-0.8.3.c-wx2.6.1.0.tar.gz"?
+   
+  Andy
+
+       
+---------------------------------
+Ahhh...imagining that irresistible "new car" smell?
+ Check outnew cars at Yahoo! Autos.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20070417/ce59a0ca/attachment.html>
+
+From ajlouder at yahoo.com  Wed Apr 18 22:39:40 2007
+From: ajlouder at yahoo.com (Andrew Louder)
+Date: Wed, 18 Apr 2007 13:39:40 -0700 (PDT)
+Subject: [spe-users] SPE with cygwin
+In-Reply-To: <633357.15741.qm@web34801.mail.mud.yahoo.com>
+Message-ID: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+
+Does anybody know how to install SPE with cygwin?
+  Note the following link is broken:
+  http://pythonide.stani.be/manual/html/manual.html
+
+  Andy
+
+Andrew Louder <ajlouder at yahoo.com> wrote:
+  http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+http://pythonide.stani.be/blog/sm_donate
+--
+
+
+  To whom it may concern:
+   
+      I would like to try SPE with Cygwin.  Which installation instuctions should I follow?
+   
+  >    0.8.3 2006-10-19 06:00 
+> SPE-0.8.3.c-wx2.6.1.0-no_setup.zip
+> SPE-0.8.3.c-wx2.6.1.0-py24.exe
+> SPE-0.8.3.c-wx2.6.1.0.tar.gz
+
+      Should I download extract the "SPE-0.8.3.c-wx2.6.1.0.tar.gz"?
+   
+  Andy
+    
+---------------------------------
+  Ahhh...imagining that irresistible "new car" smell?
+Check out new cars at Yahoo! Autos. _______________________________________________
+Python-spe-users mailing list
+Python-spe-users at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+       
+---------------------------------
+Ahhh...imagining that irresistible "new car" smell?
+ Check outnew cars at Yahoo! Autos.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20070418/d615916f/attachment.html>
+
+From ajlouder at yahoo.com  Wed Apr 18 22:39:40 2007
+From: ajlouder at yahoo.com (Andrew Louder)
+Date: Wed, 18 Apr 2007 13:39:40 -0700 (PDT)
+Subject: [spe-users] SPE with cygwin
+In-Reply-To: <633357.15741.qm@web34801.mail.mud.yahoo.com>
+Message-ID: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+
+Does anybody know how to install SPE with cygwin?
+  Note the following link is broken:
+  http://pythonide.stani.be/manual/html/manual.html
+
+  Andy
+
+Andrew Louder <ajlouder at yahoo.com> wrote:
+  http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+http://pythonide.stani.be/blog/sm_donate
+--
+
+
+  To whom it may concern:
+   
+      I would like to try SPE with Cygwin.  Which installation instuctions should I follow?
+   
+  >    0.8.3 2006-10-19 06:00 
+> SPE-0.8.3.c-wx2.6.1.0-no_setup.zip
+> SPE-0.8.3.c-wx2.6.1.0-py24.exe
+> SPE-0.8.3.c-wx2.6.1.0.tar.gz
+
+      Should I download extract the "SPE-0.8.3.c-wx2.6.1.0.tar.gz"?
+   
+  Andy
+    
+---------------------------------
+  Ahhh...imagining that irresistible "new car" smell?
+Check out new cars at Yahoo! Autos. _______________________________________________
+Python-spe-users mailing list
+Python-spe-users at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+       
+---------------------------------
+Ahhh...imagining that irresistible "new car" smell?
+ Check outnew cars at Yahoo! Autos.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20070418/d615916f/attachment-0001.html>
+

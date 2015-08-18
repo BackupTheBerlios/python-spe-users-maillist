@@ -1,0 +1,19 @@
+From yama at netoso.com  Sun Nov  2 03:28:43 2008
+From: yama at netoso.com (Yama Ploskonka)
+Date: Sat, 01 Nov 2008 21:28:43 -0500
+Subject: [spe-users] PyDoc error
+Message-ID: <490D105B.3020504@netoso.com>
+
+I get this error when activating the Pydoc tab.
+I have a simple .py file loaded.
+What am I doing wrong?
+
+Thanks
+
+Yama
+
+Error
+SPE could not generate documentation for type:
+[Errno 2] No such file or directory: '/text.txt'
+
+

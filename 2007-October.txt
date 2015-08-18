@@ -1,0 +1,20 @@
+From diaasami at gmail.com  Mon Oct  1 18:54:43 2007
+From: diaasami at gmail.com (Diaa Sami)
+Date: Mon, 01 Oct 2007 18:54:43 +0200
+Subject: [spe-users] Some requests
+Message-ID: <fdr8mo$h02$1@sea.gmane.org>
+
+Some enhancements and feature requests for the current SPE head:
+1.When file is reloaded due to modification by another application, it shouldn't be marked as modified.
+2.When a file is closed, its contents remain in the text area(though you can't actually do anything 
+with them, no save no run) but it's kinda confusing.
+3.The "Default" button in the preferences dialog doesn't conform to Windows conventions, Save should 
+be the left-most button.
+4.Code-completion needs some enhancements, it shouldn't show a list when there's only 1 matching 
+variable, it should auto-complete without intervention.
+
+Thanks,
+Diaa Sami
+
+
+

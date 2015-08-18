@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-users] noob Q: cannot get spe to run scripts in ubuntu 9.04
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-users/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20noob%20Q%3A%20cannot%20get%20spe%20to%20run%20scripts%20in%20ubuntu%209.04&In-Reply-To=%3C4AC60CF1.1080709%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000052.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-users] noob Q: cannot get spe to run scripts in ubuntu 9.04</H1>
+    <B>jacob sikker remin</B> 
+    <A HREF="mailto:python-spe-users%40lists.berlios.de?Subject=Re%3A%20%5Bspe-users%5D%20noob%20Q%3A%20cannot%20get%20spe%20to%20run%20scripts%20in%20ubuntu%209.04&In-Reply-To=%3C4AC60CF1.1080709%40gmail.com%3E"
+       TITLE="[spe-users] noob Q: cannot get spe to run scripts in ubuntu 9.04">uglenbatman at gmail.com
+       </A><BR>
+    <I>Fri Oct  2 16:23:45 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000052.html">[spe-users] [Fwd: noob Q: cannot get spe to run scripts in ubuntu	9.04]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#51">[ date ]</a>
+              <a href="thread.html#51">[ thread ]</a>
+              <a href="subject.html#51">[ subject ]</a>
+              <a href="author.html#51">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hej spe specialist,
+
+i am very new to python and this list. so i am sorry if i post something 
+which has already been covered on this list or elsewhere.
+
+i have installed spe on my computer running ubuntu 9.04... i can lauch 
+spe just fine, but when i try to run a script nothing happens....
+like described here: 
+<A HREF="https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044">https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044</A>
+
+i tried to update python to version 2.8 but all i can find in synaptic 
+is 3.0
+
+this is to make the following patch:
+
+    stani &lt;<A HREF="https://launchpad.net/%7Estani">https://launchpad.net/%7Estani</A>&gt; wrote on 2009-05-22: 	#4
+    &lt;<A HREF="https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044/comments/4">https://bugs.launchpad.net/ubuntu/jaunty/+source/spe/+bug/377044/comments/4</A>&gt;
+
+
+    The minimal patch is only changing one line:
+    sudo gedit /usr/bin/spe
+
+    Change this line:
+    MIN_WX_VERSION = '2.5.4.1'
+
+    into:
+    MIN_WX_VERSION = '2.8'
+
+    After that you can run your scripts happily again. I'll prepare an
+    official patch and attach it to this bug.
+
+i edited the file, but still when starting spe, the version which is 
+displayed in the shell is 2.6.2 -- how can i get it to recognize 3.0.1?
+or how can i install 2.8 and get it to recognize this?
+
+i really hope you can help me, i am very excited to get up and running 
+with python.
+thank you very much,
+jacob
+
+-- 
+bleep:
+<A HREF="http://tthheessiiss.wordpress.com/">http://tthheessiiss.wordpress.com/</A>
+<A HREF="http://giantshouldersherewecome.wordpress.com/">http://giantshouldersherewecome.wordpress.com/</A>
+<A HREF="http://campingsex.org">http://campingsex.org</A>
+<A HREF="http://mikrogalleriet.net">http://mikrogalleriet.net</A>
+<A HREF="http://8bitklubben.dk">http://8bitklubben.dk</A>
+<A HREF="http://myspace.com/blissfullymediocre">http://myspace.com/blissfullymediocre</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-users/attachments/20091002/6781712c/attachment.html">https://lists.berlios.de/pipermail/python-spe-users/attachments/20091002/6781712c/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000052.html">[spe-users] [Fwd: noob Q: cannot get spe to run scripts in ubuntu	9.04]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#51">[ date ]</a>
+              <a href="thread.html#51">[ thread ]</a>
+              <a href="subject.html#51">[ subject ]</a>
+              <a href="author.html#51">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-users">More information about the Python-spe-users
+mailing list</a><br>
+</body></html>

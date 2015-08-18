@@ -1,0 +1,240 @@
+From tim_grove at sil.org  Tue Dec  2 17:27:15 2008
+From: tim_grove at sil.org (Tim Grove)
+Date: Tue, 02 Dec 2008 11:27:15 -0500
+Subject: [spe-users] SPE on Win64 ?
+Message-ID: <web-201898479@mail.link77.net>
+
+Hello,
+
+I'm new to this list but have been using SPE for the past couple of years. My laptop has just died and I need to buy a new one, and I was wondering if I would have any problems in running my favourite wxPython IDE under a 64 bit architecture? Thanks for your help.
+
+Best regards,
+Tim Grove
+
+
+From spe.stani.be at gmail.com  Tue Dec  2 18:46:05 2008
+From: spe.stani.be at gmail.com (Stani)
+Date: Tue, 2 Dec 2008 18:46:05 +0100
+Subject: [spe-users] SPE on Win64 ?
+In-Reply-To: <web-201898479@mail.link77.net>
+References: <web-201898479@mail.link77.net>
+Message-ID: <2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>
+
+If python and wxpython work there, there should be no problem. So you
+better check this on the wxpython-user mailing list.
+
+On Tue, Dec 2, 2008 at 5:27 PM, Tim Grove <tim_grove at sil.org> wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+> Hello,
+>
+> I'm new to this list but have been using SPE for the past couple of years. My laptop has just died and I need to buy a new one, and I was wondering if I would have any problems in running my favourite wxPython IDE under a 64 bit architecture? Thanks for your help.
+>
+> Best regards,
+> Tim Grove
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+
+
+
+-- 
+Phatch Photo Batch Processor - http://photobatch.stani.be
+SPE Python IDE - http://pythonide.stani.be
+
+
+From fuzzyman at voidspace.org.uk  Tue Dec  2 18:50:22 2008
+From: fuzzyman at voidspace.org.uk (Michael Foord)
+Date: Tue, 02 Dec 2008 17:50:22 +0000
+Subject: [spe-users] SPE on Win64 ?
+In-Reply-To: <2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>
+References: <web-201898479@mail.link77.net>
+	<2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>
+Message-ID: <4935755E.7030305@voidspace.org.uk>
+
+Stani wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+> If python and wxpython work there, there should be no problem. So you
+> better check this on the wxpython-user mailing list.
+>   
+If you install the 32bit version of Python it should work fine.
+
+Michael
+
+> On Tue, Dec 2, 2008 at 5:27 PM, Tim Grove <tim_grove at sil.org> wrote:
+>   
+>> http://pythonide.stani.be
+>> http://pythonide.stani.be/manual/html/manual.html
+>> http://pythonide.stani.be/blog/sm_donate
+>> --
+>>
+>>
+>> Hello,
+>>
+>> I'm new to this list but have been using SPE for the past couple of years. My laptop has just died and I need to buy a new one, and I was wondering if I would have any problems in running my favourite wxPython IDE under a 64 bit architecture? Thanks for your help.
+>>
+>> Best regards,
+>> Tim Grove
+>> _______________________________________________
+>> Python-spe-users mailing list
+>> Python-spe-users at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>>
+>>     
+>
+>
+>
+>   
+
+
+-- 
+http://www.ironpythoninaction.com/
+http://www.voidspace.org.uk/blog
+
+
+
+
+From tim_grove at sil.org  Tue Dec  2 23:49:26 2008
+From: tim_grove at sil.org (Tim Grove)
+Date: Tue, 02 Dec 2008 17:49:26 -0500
+Subject: [spe-users] SPE on Win64 ?
+In-Reply-To: <4935755E.7030305@voidspace.org.uk>
+References: <web-201898479@mail.link77.net>
+	<2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>
+	<4935755E.7030305@voidspace.org.uk>
+Message-ID: <web-201948394@mail.link77.net>
+
+   
+> If you install the 32bit version of Python it should work fine.
+> 
+> Michael
+
+So, does that mean that I can install the 32bit version on a 64 bit architecture?
+
+> 
+> > On Tue, Dec 2, 2008 at 5:27 PM, Tim Grove <tim_grove at sil.org> wrote:
+
+> >>
+> >> Hello,
+> >>
+> >> I'm new to this list but have been using SPE for the past couple of years. My laptop has just died and I need to buy a new one, and I was wondering if I would have any problems in running my favourite wxPython IDE under a 64 bit architecture? Thanks for your help.
+> >>
+> >> Best regards,
+> >> Tim Grove
+
+
+From fuzzyman at voidspace.org.uk  Tue Dec  2 23:51:16 2008
+From: fuzzyman at voidspace.org.uk (Michael Foord)
+Date: Tue, 02 Dec 2008 22:51:16 +0000
+Subject: [spe-users] SPE on Win64 ?
+In-Reply-To: <web-201948394@mail.link77.net>
+References: <web-201898479@mail.link77.net>	<2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>	<4935755E.7030305@voidspace.org.uk>
+	<web-201948394@mail.link77.net>
+Message-ID: <4935BBE4.5080806@voidspace.org.uk>
+
+Tim Grove wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+>    
+>   
+>> If you install the 32bit version of Python it should work fine.
+>>
+>> Michael
+>>     
+>
+> So, does that mean that I can install the 32bit version on a 64 bit architecture?
+>
+>   
+
+Yes. 64bit Windows supports running 32bit applications. If you install 
+the 32bit version of Python then SPE will be running as a 32bit app.
+
+Michael
+
+>>> On Tue, Dec 2, 2008 at 5:27 PM, Tim Grove <tim_grove at sil.org> wrote:
+>>>       
+>
+>   
+>>>> Hello,
+>>>>
+>>>> I'm new to this list but have been using SPE for the past couple of years. My laptop has just died and I need to buy a new one, and I was wondering if I would have any problems in running my favourite wxPython IDE under a 64 bit architecture? Thanks for your help.
+>>>>
+>>>> Best regards,
+>>>> Tim Grove
+>>>>         
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>   
+
+
+-- 
+http://www.ironpythoninaction.com/
+http://www.voidspace.org.uk/blog
+
+
+
+
+From mlacunza at gmail.com  Tue Dec  2 23:52:22 2008
+From: mlacunza at gmail.com (Mario Lacunza)
+Date: Tue, 2 Dec 2008 17:52:22 -0500
+Subject: [spe-users] SPE on Win64 ?
+In-Reply-To: <web-201948394@mail.link77.net>
+References: <web-201898479@mail.link77.net>
+	<2078a7ad0812020946q16f1fffcs9f34ff7a242edf08@mail.gmail.com>
+	<4935755E.7030305@voidspace.org.uk> <web-201948394@mail.link77.net>
+Message-ID: <771741b20812021452y6a49c1c8o3e64c965239345a9@mail.gmail.com>
+
+2008/12/2 Tim Grove <tim_grove at sil.org>
+
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+>
+> > If you install the 32bit version of Python it should work fine.
+> >
+> > Michael
+>
+> So, does that mean that I can install the 32bit version on a 64 bit
+> architecture?
+>
+>
+Hello,
+
+right now I just install the Spe version from Ubuntu 8.10 64bits repos I
+work great.
+
+Yes you can compile 32bits programs in 64 bits with the force command.
+
+-- 
+Saludos / Best regards
+
+Mario Lacunza
+Software Architect - Webmaster
+
+Email: mlacunza [AT] gmail [DOT] com
+http://www.lacunza.info
+Lima - Peru
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20081202/49017e9a/attachment.html>
+

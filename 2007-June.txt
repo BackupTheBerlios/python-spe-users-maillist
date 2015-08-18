@@ -1,0 +1,277 @@
+From spe.stani.be at gmail.com  Fri Jun  8 19:12:45 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Fri, 08 Jun 2007 19:12:45 +0200
+Subject: [spe-users] SPE with cygwin
+In-Reply-To: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+References: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+Message-ID: <46698E0D.1000009@gmail.com>
+
+Sorry for not noticing this mail. You need first to install wxPython. As
+SPE is 100% python it should be straightforward. The only recommended
+version of SPE everyone should install is the one from subversion:
+http://pythonide.blogspot.com/2007/02/how-to-download-latest-spe-from_26.html
+Stani
+
+Andrew Louder wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Does anybody know how to install SPE with cygwin?
+>   Note the following link is broken:
+>   http://pythonide.stani.be/manual/html/manual.html
+> 
+>   Andy
+> 
+> Andrew Louder <ajlouder at yahoo.com> wrote:
+>   http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+>   To whom it may concern:
+>    
+>       I would like to try SPE with Cygwin.  Which installation instuctions should I follow?
+>    
+>   >    0.8.3 2006-10-19 06:00 
+>> SPE-0.8.3.c-wx2.6.1.0-no_setup.zip
+>> SPE-0.8.3.c-wx2.6.1.0-py24.exe
+>> SPE-0.8.3.c-wx2.6.1.0.tar.gz
+> 
+>       Should I download extract the "SPE-0.8.3.c-wx2.6.1.0.tar.gz"?
+>    
+>   Andy
+>     
+> ---------------------------------
+>   Ahhh...imagining that irresistible "new car" smell?
+> Check out new cars at Yahoo! Autos. _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+> 
+>        
+> ---------------------------------
+> Ahhh...imagining that irresistible "new car" smell?
+>  Check outnew cars at Yahoo! Autos.
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+
+From rdm at rcblue.com  Thu Jun 14 20:47:32 2007
+From: rdm at rcblue.com (Dick Moores)
+Date: Thu, 14 Jun 2007 11:47:32 -0700
+Subject: [spe-users] Is there a manual?
+In-Reply-To: <46698E0D.1000009@gmail.com>
+References: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+	<46698E0D.1000009@gmail.com>
+Message-ID: <20070614185708.A1D6AF1D67@mail.berlios.de>
+
+http://pythonide.stani.be/manual/html/manual.html
+
+This link continues to be broken.
+
+Thanks,
+
+Dick Moores
+
+
+
+From spe.stani.be at gmail.com  Fri Jun 15 02:30:18 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Fri, 15 Jun 2007 02:30:18 +0200
+Subject: [spe-users] Is there a manual?
+In-Reply-To: <20070614185708.A1D6AF1D67@mail.berlios.de>
+References: <489163.9302.qm@web34803.mail.mud.yahoo.com>	<46698E0D.1000009@gmail.com>
+	<20070614185708.A1D6AF1D67@mail.berlios.de>
+Message-ID: <4671DD9A.3060105@gmail.com>
+
+Dick Moores schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> http://pythonide.stani.be/manual/html/manual.html
+> 
+> This link continues to be broken.
+> 
+> Thanks,
+> 
+> Dick Moores
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+There is a manual, but not online. A donation (from as little as 1 euro,
+more is also ok ;-) will drop a nice pdf manual in your email box.
+
+Thanks for considering,
+Stani
+
+
+From rdmoores at gmail.com  Sat Jun 16 03:11:05 2007
+From: rdmoores at gmail.com (Dick Moores)
+Date: Fri, 15 Jun 2007 18:11:05 -0700
+Subject: [spe-users] Is there a manual?
+In-Reply-To: <4671DD9A.3060105@gmail.com>
+References: <489163.9302.qm@web34803.mail.mud.yahoo.com>
+	<46698E0D.1000009@gmail.com>
+	<20070614185708.A1D6AF1D67@mail.berlios.de>
+	<4671DD9A.3060105@gmail.com>
+Message-ID: <d71c7ed60706151811o186d7dbfs48ea3df8f350d08@mail.gmail.com>
+
+On 6/14/07, Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+>
+>
+> > http://pythonide.stani.be/manual/html/manual.html
+> >
+> > This link continues to be broken.
+> >
+> > Thanks,
+> >
+> > Dick Moores
+> >
+> > _______________________________________________
+> > Python-spe-users mailing list
+> > Python-spe-users at lists.berlios.de
+> > https://lists.berlios.de/mailman/listinfo/python-spe-users
+> >
+> There is a manual, but not online. A donation (from as little as 1 euro,
+> more is also ok ;-) will drop a nice pdf manual in your email box.
+
+
+Terrific! I just sent you 10 Euros.
+
+Dick Moores
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20070615/e7c3931f/attachment.html>
+
+From spe.stani.be at gmail.com  Sat Jun 16 03:49:38 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Sat, 16 Jun 2007 03:49:38 +0200
+Subject: [spe-users] Is there a manual?
+In-Reply-To: <d71c7ed60706151811o186d7dbfs48ea3df8f350d08@mail.gmail.com>
+References: <489163.9302.qm@web34803.mail.mud.yahoo.com>	<46698E0D.1000009@gmail.com>	<20070614185708.A1D6AF1D67@mail.berlios.de>	<4671DD9A.3060105@gmail.com>
+	<d71c7ed60706151811o186d7dbfs48ea3df8f350d08@mail.gmail.com>
+Message-ID: <467341B2.9060403@gmail.com>
+
+The manual is on its way, thanks!
+
+Stani
+
+Dick Moores schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> On 6/14/07, Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+>>
+>>
+>> > http://pythonide.stani.be/manual/html/manual.html
+>> >
+>> > This link continues to be broken.
+>> >
+>> > Thanks,
+>> >
+>> > Dick Moores
+>> >
+>> > _______________________________________________
+>> > Python-spe-users mailing list
+>> > Python-spe-users at lists.berlios.de
+>> > https://lists.berlios.de/mailman/listinfo/python-spe-users
+>> >
+>> There is a manual, but not online. A donation (from as little as 1 euro,
+>> more is also ok ;-) will drop a nice pdf manual in your email box.
+> 
+> 
+> Terrific! I just sent you 10 Euros.
+> 
+> Dick Moores
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+
+From rdm at rcblue.com  Sat Jun 16 10:31:07 2007
+From: rdm at rcblue.com (Dick Moores)
+Date: Sat, 16 Jun 2007 01:31:07 -0700
+Subject: [spe-users] the manual and wxGlade
+Message-ID: <20070616083354.C4A03F4BD2@mail.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20070616/ce7d9d87/attachment.html>
+
+From spe.stani.be at gmail.com  Sat Jun 16 20:42:30 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Sat, 16 Jun 2007 20:42:30 +0200
+Subject: [spe-users] the manual and wxGlade
+In-Reply-To: <20070616083354.C4A03F4BD2@mail.berlios.de>
+References: <20070616083354.C4A03F4BD2@mail.berlios.de>
+Message-ID: <46742F16.5010201@gmail.com>
+
+Dick Moores wrote:
+
+> 
+> I've begun to try making the GUI described in the wxGlade section of the SPE 
+> manual. I've done up through this sentence on p. 46:
+> 
+> "It is very important to add a panel to the sizer, otherwise your application 
+> will look funny in
+> Windows. 
+
+This is a difference between dialogs and frames. Frames need first a
+panel, a wx.Dialog not.
+
+> So please add a sizer with 3 rows."
+> 
+> So I have the sizer with 3 rows. But I don't understand the next 2 sentences.
+> 
+> "Now we will add two buttons and one text field to
+> the frame. Just click on the "Add TextCtrl" in the main window and than click on 
+> the upper row
+> in your panel. Repeat this for both buttons."
+
+> 
+> What is "your panel" 
+The panel is the panel you created first in the Frame.
+> and what is "the upper row"?
+You've said you have the sizer with the three rows. The "upper row" is
+the first of these three rows.
+
+If you are going to develop in wxPython, I can also strongly recommend
+you the book "wxPython in Action" of Robin Dunn, the author of wxPython.
+
+Stani
+
+

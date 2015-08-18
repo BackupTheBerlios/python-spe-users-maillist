@@ -1,0 +1,96 @@
+From carl at personnelware.com  Sat May 17 15:38:47 2008
+From: carl at personnelware.com (Carl Karsten)
+Date: Sat, 17 May 2008 08:38:47 -0500
+Subject: [spe-users] add SPE to wikipedia
+Message-ID: <482EDFE7.10407@personnelware.com>
+
+I just figured out that the text editor SPE uses will fold html and django 
+template code pretty well.  This lead do me having to explain what fold meant, 
+and I found:
+
+http://en.wikipedia.org/wiki/Code_folding
+
+Is it reasonable to add SPE to that list?
+
+Carl K
+
+
+From carl at personnelware.com  Sat May 17 21:40:24 2008
+From: carl at personnelware.com (Carl Karsten)
+Date: Sat, 17 May 2008 14:40:24 -0500
+Subject: [spe-users] add SPE to wikipedia
+In-Reply-To: <482EDFE7.10407@personnelware.com>
+References: <482EDFE7.10407@personnelware.com>
+Message-ID: <482F34A8.8040201@personnelware.com>
+
+Carl Karsten wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> I just figured out that the text editor SPE uses will fold html and django 
+> template code pretty well.  This lead do me having to explain what fold meant, 
+> and I found:
+> 
+> http://en.wikipedia.org/wiki/Code_folding
+> 
+> Is it reasonable to add SPE to that list?
+> 
+
+here too:
+
+http://scintilla.sourceforge.net/ScintillaRelated.html
+
+Carl K
+
+
+From spe.stani.be at gmail.com  Sat May 17 21:48:27 2008
+From: spe.stani.be at gmail.com (Stani Michiels)
+Date: Sat, 17 May 2008 21:48:27 +0200
+Subject: [spe-users] add SPE to wikipedia
+In-Reply-To: <482F34A8.8040201@personnelware.com>
+References: <482EDFE7.10407@personnelware.com>
+	<482F34A8.8040201@personnelware.com>
+Message-ID: <1211053707.6025.5.camel@x30>
+
+Op zaterdag 17-05-2008 om 14:40 uur [tijdzone -0500], schreef Carl
+Karsten:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Carl Karsten wrote:
+> > http://pythonide.stani.be
+> > http://pythonide.stani.be/manual/html/manual.html
+> > http://pythonide.stani.be/blog/sm_donate
+> > --
+> > 
+> > 
+> > I just figured out that the text editor SPE uses will fold html and django 
+> > template code pretty well.  This lead do me having to explain what fold meant, 
+> > and I found:
+> > 
+> > http://en.wikipedia.org/wiki/Code_folding
+> > 
+> > Is it reasonable to add SPE to that list?
+> > 
+> 
+> here too:
+> 
+> http://scintilla.sourceforge.net/ScintillaRelated.html
+> 
+> Carl K
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+Yes, please go ahead. Spread the word where you can ;-)
+Stani
+
+
+

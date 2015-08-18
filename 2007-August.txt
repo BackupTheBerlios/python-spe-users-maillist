@@ -1,0 +1,260 @@
+From niko.nk at libertysurf.fr  Mon Aug 13 23:09:15 2007
+From: niko.nk at libertysurf.fr (=?iso-8859-1?Q?niko.nk@libertysurf.fr?=)
+Date: Mon, 13 Aug 2007 23:09:15 +0200
+Subject: [spe-users] =?iso-8859-1?q?problem_with_accents?=
+Message-ID: <JMQDFF$0EE0202530B1B31D5819F2189C2876C2@aliceadsl.fr>
+
+
+I'm not able to open python files containing some accents in
+the comments.
+
+Spe notify me that there are Unicode Errors, and the Source
+tab is totaly empty.
+
+I had the same kind of reaction with Boa Constructor. This
+problem was corrected by placing a file in the
+/usr/lib/python2.(5)/site-packages/ directory
+. This file (sitecustomize.py)  contain this peace of code :
+       import sys
+       sys.setdefaultencoding('iso-8859-1')
+
+
+Is there any issue to this problem with spe ?
+
+------------------------ ALICE C'EST ENCORE MIEUX AVEC CANAL+ LE BOUQUET ! ---------------
+D?couvrez vite l'offre exclusive ALICEBOX et CANAL+ LE BOUQUET, en cliquant ici http://alicebox.fr
+Soumis ? conditions.
+
+
+
+
+From spe.stani.be at gmail.com  Tue Aug 14 00:28:55 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Tue, 14 Aug 2007 00:28:55 +0200
+Subject: [spe-users] problem with accents
+In-Reply-To: <JMQDFF$0EE0202530B1B31D5819F2189C2876C2@aliceadsl.fr>
+References: <JMQDFF$0EE0202530B1B31D5819F2189C2876C2@aliceadsl.fr>
+Message-ID: <46C0DB27.9030400@gmail.com>
+
+Did you specify the encoding according to pep-0263?
+http://www.python.org/dev/peps/pep-0263/
+
+Stani
+
+niko.nk at libertysurf.fr schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> 
+> I'm not able to open python files containing some accents in
+> the comments.
+> 
+> Spe notify me that there are Unicode Errors, and the Source
+> tab is totaly empty.
+> 
+> I had the same kind of reaction with Boa Constructor. This
+> problem was corrected by placing a file in the
+> /usr/lib/python2.(5)/site-packages/ directory
+> . This file (sitecustomize.py)  contain this peace of code :
+>        import sys
+>        sys.setdefaultencoding('iso-8859-1')
+> 
+> 
+> Is there any issue to this problem with spe ?
+> 
+> ------------------------ ALICE C'EST ENCORE MIEUX AVEC CANAL+ LE BOUQUET ! ---------------
+> D?couvrez vite l'offre exclusive ALICEBOX et CANAL+ LE BOUQUET, en cliquant ici http://alicebox.fr
+> Soumis ? conditions.
+> 
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+
+
+
+From niko.nk at libertysurf.fr  Tue Aug 14 21:30:34 2007
+From: niko.nk at libertysurf.fr (=?iso-8859-1?Q?niko.nk@libertysurf.fr?=)
+Date: Tue, 14 Aug 2007 21:30:34 +0200
+Subject: [spe-users] =?iso-8859-1?q?problem_with_accents?=
+Message-ID: <JMS3IY$739F649EA111824CA18B4ABE21FA2DBF@aliceadsl.fr>
+
+
+Thank you for your response,
+
+It as helped me to find the problem, which was not an spe
+one but took is origin in my files. 
+I usually specify the encoding as utf-8 but my files had
+been edited by lots of editor (emacs, notespad,
+boa-constructor ...) both on Mandriva and Windows...
+
+At the end my accents have been converted in something that
+ unicode is not able to understand !
+
+Surprisingly,  iso-8859-1 encoding doesn't block the opening
+of the file even if my accents are no more readable
+
+Thank you again
+Nicolas
+
+
+ps : sorry for  the ads at the end of this mail
+
+---------- Initial Header -----------
+
+From      : python-spe-users-bounces at lists.berlios.de
+To          : Mailing list for spe users
+<python-spe-users at lists.berlios.de>
+Cc          : 
+Date      : Tue, 14 Aug 2007 00:28:55 +0200
+Subject : Re: [spe-users] problem with accents
+
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+http://pythonide.stani.be/blog/sm_donate
+--
+
+
+Did you specify the encoding according to pep-0263?
+http://www.python.org/dev/peps/pep-0263/
+
+Stani
+
+niko.nk at libertysurf.fr schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> 
+> I'm not able to open python files containing some accents in
+> the comments.
+> 
+> Spe notify me that there are Unicode Errors, and the Source
+> tab is totaly empty.
+> 
+> I had the same kind of reaction with Boa Constructor. This
+> problem was corrected by placing a file in the
+> /usr/lib/python2.(5)/site-packages/ directory
+> . This file (sitecustomize.py)  contain this peace of code :
+>        import sys
+>        sys.setdefaultencoding('iso-8859-1')
+> 
+> 
+> Is there any issue to this problem with spe ?
+
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+
+_______________________________________________
+Python-spe-users mailing list
+Python-spe-users at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+------------------------ ALICE C'EST ENCORE MIEUX AVEC CANAL+ LE BOUQUET ! ---------------
+D?couvrez vite l'offre exclusive ALICEBOX et CANAL+ LE BOUQUET, en cliquant ici http://alicebox.fr
+Soumis ? conditions.
+
+
+
+
+From diaasami at gmail.com  Mon Aug 27 21:30:41 2007
+From: diaasami at gmail.com (Diaa Sami)
+Date: Mon, 27 Aug 2007 22:30:41 +0300
+Subject: [spe-users] [Head,WinXP] Running fails
+Message-ID: <fav8ou$6nv$1@sea.gmane.org>
+
+I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+2.6.4 Unicode.
+When I run the application, with or without parameters I get the following message in the output panel:
+C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+Script terminated.
+
+I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+as they're already added in info.path()
+
+Index: Parent.py
+===================================================================
+--- Parent.py	(revision 243)
++++ Parent.py	(working copy)
+@@ -689,7 +689,7 @@
+                                  'path':         path,
+                                  'arguments':    arguments,
+                                  'python':       info.PYTHON_EXEC}
+-            label = params['label'] = '"%(file)s" %(arguments)s'%params
++            label = params['label'] = '%(file)s %(arguments)s'%params
+              os.chdir(path)
+              self.output.Execute("""%(python)s -u %(label)s"""%params,label=label,beep=beep)
+
+
+Regards,
+Diaa M. Sami
+
+
+
+From spe.stani.be at gmail.com  Thu Aug 30 09:06:01 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Thu, 30 Aug 2007 09:06:01 +0200
+Subject: [spe-users] [Head,WinXP] Running fails
+In-Reply-To: <fav8ou$6nv$1@sea.gmane.org>
+References: <fav8ou$6nv$1@sea.gmane.org>
+Message-ID: <46D66C59.1070506@gmail.com>
+
+Hi Diaa Sami,
+You're right. Windows users will be happy with this. I've just committed
+this patch together with another small one. (On linux SPE will now save
+backup files with ~ rather than .bak)
+Thanks a lot!
+Stani
+
+Diaa Sami schreef:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> I've just checked out r243 from the repository and I'm running on Windows XP, Python 2.5.1, wxPython 
+> 2.6.4 Unicode.
+> When I run the application, with or without parameters I get the following message in the output panel:
+> C:\Python25\python.exe: can't open file 'C:\Documents': [Errno 2] No such file or directory
+> Script terminated.
+> 
+> I investigated the problem and the following patch fixes it, there's no need for the 2 doublequotes 
+> as they're already added in info.path()
+> 
+> Index: Parent.py
+> ===================================================================
+> --- Parent.py	(revision 243)
+> +++ Parent.py	(working copy)
+> @@ -689,7 +689,7 @@
+>                                   'path':         path,
+>                                   'arguments':    arguments,
+>                                   'python':       info.PYTHON_EXEC}
+> -            label = params['label'] = '"%(file)s" %(arguments)s'%params
+> +            label = params['label'] = '%(file)s %(arguments)s'%params
+>               os.chdir(path)
+>               self.output.Execute("""%(python)s -u %(label)s"""%params,label=label,beep=beep)
+> 
+> 
+> Regards,
+> Diaa M. Sami
+> 
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> 
+
+
+

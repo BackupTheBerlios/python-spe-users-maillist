@@ -1,0 +1,366 @@
+From janghwan.list at gmail.com  Fri Jun 20 10:33:13 2008
+From: janghwan.list at gmail.com (Jang-hwan Kim)
+Date: Fri, 20 Jun 2008 17:33:13 +0900
+Subject: [spe-users] thanks SPE
+Message-ID: <9f7ef8910806200133k436deafcldde951116df422d9@mail.gmail.com>
+
+Hi, I've known SPE for a while, and always thought it was not only a great ide
+but also a great project, for one person to make it such successful.
+(Though I don't use SPE too much these days, since it takes too much
+cpu in my eee pc)
+
+I got my first credit card today, and proudly used my very first spend
+to donate to SPE!
+(well, technically it's buying the manual, but I would like to think
+different :)
+
+Maybe I can actually contribute to the code someday ;)
+Thanks Stani for such a good job, I appreciate it!
+
+(I personally don't have anything to do with Stani. This is NOT an ad
+or whatsoever. I just always wanted to try this)
+
+
+From spe.stani.be at gmail.com  Fri Jun 20 11:40:27 2008
+From: spe.stani.be at gmail.com (Stani)
+Date: Fri, 20 Jun 2008 11:40:27 +0200
+Subject: [spe-users] thanks SPE
+In-Reply-To: <9f7ef8910806200133k436deafcldde951116df422d9@mail.gmail.com>
+References: <9f7ef8910806200133k436deafcldde951116df422d9@mail.gmail.com>
+Message-ID: <1213954827.14643.57.camel@blue>
+
+Thanks,
+Stani
+
+Op vrijdag 20-06-2008 om 17:33 uur [tijdzone +0900], schreef Jang-hwan
+Kim:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Hi, I've known SPE for a while, and always thought it was not only a great ide
+> but also a great project, for one person to make it such successful.
+> (Though I don't use SPE too much these days, since it takes too much
+> cpu in my eee pc)
+> 
+> I got my first credit card today, and proudly used my very first spend
+> to donate to SPE!
+> (well, technically it's buying the manual, but I would like to think
+> different :)
+> 
+> Maybe I can actually contribute to the code someday ;)
+> Thanks Stani for such a good job, I appreciate it!
+> 
+> (I personally don't have anything to do with Stani. This is NOT an ad
+> or whatsoever. I just always wanted to try this)
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+
+From jason.kankiewicz at gmail.com  Fri Jun 27 16:39:53 2008
+From: jason.kankiewicz at gmail.com (Jason Kankiewicz)
+Date: Fri, 27 Jun 2008 07:39:53 -0700
+Subject: [spe-users] [Patch] "setup.py sdist" and "setup.py install" don't
+	work
+Message-ID: <g42tv1$ejf$1@ger.gmane.org>
+
+The top level "spe" directory is missing a manifest template so the 
+generated source distribution is missing a lot of files. It's also 
+missing a version number specification so it's named "spe-0.0.0".
+
+The distutils script is missing package and package data items for the 
+plugins so they don't get installed.
+
+The attached patch is against r346.
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: spe_sdist_install.patch
+URL: <https://lists.berlios.de/pipermail/python-spe-users/attachments/20080627/2a446947/attachment.ksh>
+
+From spe.stani.be at gmail.com  Sat Jun 28 17:43:53 2008
+From: spe.stani.be at gmail.com (Stani)
+Date: Sat, 28 Jun 2008 17:43:53 +0200
+Subject: [spe-users] [Patch] "setup.py sdist" and "setup.py
+	install"	don't work
+In-Reply-To: <g42tv1$ejf$1@ger.gmane.org>
+References: <g42tv1$ejf$1@ger.gmane.org>
+Message-ID: <1214667833.26856.5.camel@blue>
+
+Hi Jason,
+Thanks for your will to contribute. ?Are you on Windows? The setup.py
+was included for linux installations, which do not install the plugins
+from the SPE package so that is why they are not in the manifesto.
+(wxglade, kiki, winpdb are installed by their own packages.) To make it
+easy for Windows, where there is no packaging system, I decided to
+include them inside the SPE source tree.
+SPE can be used by just unzipping and running SPE.py. There is no need
+for it to be in the site-packages path as it is not a library but an
+application. Is there specific reason why you want to install spe with
+setup.py? 
+Best regards,
+Stani
+
+Op vrijdag 27-06-2008 om 07:39 uur [tijdzone -0700], schreef Jason
+Kankiewicz:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> The top level "spe" directory is missing a manifest template so the 
+> generated source distribution is missing a lot of files. It's also 
+> missing a version number specification so it's named "spe-0.0.0".
+> 
+> The distutils script is missing package and package data items for the 
+> plugins so they don't get installed.
+> 
+> The attached patch is against r346.
+> platte tekst-document bijlage (spe_sdist_install.patch)
+> Index: MANIFEST.in
+> ===================================================================
+> --- MANIFEST.in	(revision 0)
+> +++ MANIFEST.in	(revision 0)
+> @@ -0,0 +1,9 @@
+> +include COPYING MANIFEST* NEWS *.desktop *.sgml
+> +include _spe/plugins/winpdb/PKG-INFO
+> +include _spe/plugins/winpdb/rpdb2
+> +include _spe/plugins/winpdb/winpdb
+> +include _spe/plugins/wxGlade/Makefile
+> +include _spe/plugins/wxGlade/wxglade
+> +include _spe/plugins/XRCed/sawfishrc
+> +recursive-include _spe *.ad *.bat *.blend *.cfg *.conf *.dwg *.gif *.htm *.html *.ico *.jpg *.mo *.png *.po *.pot *.py *.pyw *.sh *.spec *.svg *.txt *.wgt *.wmf *.wxg *.xpm *.xrc
+> +global-exclude .svn/*
+> Index: setup.py
+> ===================================================================
+> --- setup.py	(revision 346)
+> +++ setup.py	(working copy)
+> @@ -1,15 +1,143 @@
+>  #/usr/bin/python
+>  from distutils.core import setup
+> +from _spe.info import INFO
+>  
+>  setup(name          = "spe",
+> -      description   = """Python IDE with UML, PyChecker Source Code Doctor, WinPdb Debugger, wxGlade and XRCed GUI designers and Blender support.""",
+> -      author        = "www.stani.be",
+> -      author_email  = "spe.stani.be at gmail.com",
+> -      url           = "http://pythonide.stani.be",
+> -      license       = "GPL",
+> -      scripts       = ['_spe/spe'],
+> -      packages      = ['_spe', '_spe.dialogs', '_spe.examples', '_spe.plugins', '_spe.shortcuts', '_spe.sidebar',
+> -                       '_spe.skins', '_spe.sm', '_spe.tabs', '_spe.view', '_spe.skins.default', '_spe.sm.wxp'],
+> -      package_data  = {'_spe': ['defaults.cfg', 'doc/donate.html', 'doc/about.htm', 'skins/default/*', 'images/*']}
+> +    description   = """Python IDE with UML, PyChecker Source Code Doctor, WinPdb Debugger, wxGlade and XRCed GUI designers and Blender support.""",
+> +    author        = "www.stani.be",
+> +    author_email  = "spe.stani.be at gmail.com",
+> +    url           = "http://pythonide.stani.be",
+> +    license       = "GPL",
+> +    scripts       = ['_spe/spe'],
+> +    packages      = [
+> +        '_spe',
+> +        '_spe.dialogs',
+> +        '_spe.examples',
+> +        '_spe.plugins',
+> +        '_spe.plugins.kiki',
+> +        '_spe.plugins.pychecker',
+> +        '_spe.plugins.pychecker2',
+> +        '_spe.plugins.winpdb',
+> +        '_spe.plugins.wxGlade',
+> +        '_spe.plugins.wxGlade.edit_sizers',
+> +        '_spe.plugins.wxGlade.widgets',
+> +        '_spe.plugins.wxGlade.widgets.bitmap_button',
+> +        '_spe.plugins.wxGlade.widgets.button',
+> +        '_spe.plugins.wxGlade.widgets.calendar_ctrl',
+> +        '_spe.plugins.wxGlade.widgets.checkbox',
+> +        '_spe.plugins.wxGlade.widgets.choice',
+> +        '_spe.plugins.wxGlade.widgets.combo_box',
+> +        '_spe.plugins.wxGlade.widgets.custom_widget',
+> +        '_spe.plugins.wxGlade.widgets.datepicker_ctrl',
+> +        '_spe.plugins.wxGlade.widgets.dialog',
+> +        '_spe.plugins.wxGlade.widgets.frame',
+> +        '_spe.plugins.wxGlade.widgets.gauge',
+> +        '_spe.plugins.wxGlade.widgets.grid',
+> +        '_spe.plugins.wxGlade.widgets.list_box',
+> +        '_spe.plugins.wxGlade.widgets.list_ctrl',
+> +        '_spe.plugins.wxGlade.widgets.menubar',
+> +        '_spe.plugins.wxGlade.widgets.notebook',
+> +        '_spe.plugins.wxGlade.widgets.panel',
+> +        '_spe.plugins.wxGlade.widgets.radio_box',
+> +        '_spe.plugins.wxGlade.widgets.radio_button',
+> +        '_spe.plugins.wxGlade.widgets.slider',
+> +        '_spe.plugins.wxGlade.widgets.spacer',
+> +        '_spe.plugins.wxGlade.widgets.spin_button',
+> +        '_spe.plugins.wxGlade.widgets.spin_ctrl',
+> +        '_spe.plugins.wxGlade.widgets.splitter_window',
+> +        '_spe.plugins.wxGlade.widgets.static_bitmap',
+> +        '_spe.plugins.wxGlade.widgets.static_line',
+> +        '_spe.plugins.wxGlade.widgets.static_text',
+> +        '_spe.plugins.wxGlade.widgets.text_ctrl',
+> +        '_spe.plugins.wxGlade.widgets.toggle_button',
+> +        '_spe.plugins.wxGlade.widgets.toolbar',
+> +        '_spe.plugins.wxGlade.widgets.tree_ctrl',
+> +        '_spe.plugins.XRCed',
+> +        '_spe.shortcuts',
+> +        '_spe.sidebar',
+> +        '_spe.skins',
+> +        '_spe.sm',
+> +        '_spe.tabs',
+> +        '_spe.view',
+> +        '_spe.skins.default',
+> +        '_spe.sm.wxp',
+> +    ],
+> +    package_data  = {
+> +        '_spe': [
+> +            'spe',
+> +            '*.blend',
+> +            '*.dwg',
+> +            '*.pyw',
+> +            '*.txt',
+> +            '*.wmf',
+> +            '*.wxg',
+> +            'defaults.cfg',
+> +            'dialogs/*.wxg',
+> +            'dialogs/*.txt',
+> +            'doc/donate.html',
+> +            'doc/about.htm',
+> +            'doc/*.py',
+> +            'examples/*.txt',
+> +            'skins/*.jpg',
+> +            'skins/default/*',
+> +            'tabs/*.wxg',
+> +            'test/*.py',
+> +            'test/*.wxg',
+> +            'images/*'
+> +        ],
+> +        '_spe.plugins.pychecker': [
+> +            '*.ad',
+> +        ],
+> +        '_spe.plugins.pychecker2': [
+> +            '*.txt',
+> +        ],
+> +        '_spe.plugins.kiki': [
+> +            '*.bat',
+> +            '*.ico',
+> +            '*.txt',
+> +            '*.wxg',
+> +            'docs/*.html',
+> +        ],
+> +        '_spe.plugins.winpdb': [
+> +            'PKG-INFO',
+> +            'rpdb2',
+> +            'winpdb',
+> +            '*.txt',
+> +            'artwork/*.png',
+> +            'artwork/*.svg',
+> +        ],
+> +        '_spe.plugins.wxGlade': [
+> +            'Makefile',
+> +            'wxglade',
+> +            '*.conf',
+> +            '*.pyw',
+> +            '*.spec',
+> +            '*.txt',
+> +            'codegen/*.py',
+> +            'icons/*.ico',
+> +            'icons/*.png',
+> +            'icons/*.xpm',
+> +            'icons/gtk/*.xpm',
+> +            'icons/msw/*.xpm',
+> +            'locale/en/LC_MESSAGES/*.mo',
+> +            'locale/it/LC_MESSAGES/*.mo',
+> +            'locale/ja/LC_MESSAGES/*.mo',
+> +            'po/*.po',
+> +            'po/*.pot',
+> +            'res/*.wxg',
+> +            'templates/*.wgt',
+> +            'widgets/*.txt',
+> +        ],
+> +        '_spe.plugins.XRCed': [
+> +            'sawfishrc',
+> +            '*.ico',
+> +            '*.png',
+> +            '*.sh',
+> +            '*.txt',
+> +            '*.xrc',
+> +            'src-images/*.png',
+> +        ],
+> +    },
+> +    version = INFO["version"],
+>  )
+>  
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+
+
+
+From jason.kankiewicz at gmail.com  Sun Jun 29 04:05:04 2008
+From: jason.kankiewicz at gmail.com (Jason Kankiewicz)
+Date: Sat, 28 Jun 2008 19:05:04 -0700
+Subject: [spe-users] [Patch] "setup.py sdist" and "setup.py install"
+ don't work
+In-Reply-To: <1214667833.26856.5.camel@blue>
+References: <g42tv1$ejf$1@ger.gmane.org> <1214667833.26856.5.camel@blue>
+Message-ID: <g46qfn$ja7$1@ger.gmane.org>
+
+Stani wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+> 
+> 
+> Hi Jason,
+> Thanks for your will to contribute. ?Are you on Windows? The setup.py
+> was included for linux installations, which do not install the plugins
+> from the SPE package so that is why they are not in the manifesto.
+> (wxglade, kiki, winpdb are installed by their own packages.) To make it
+> easy for Windows, where there is no packaging system, I decided to
+> include them inside the SPE source tree.
+> SPE can be used by just unzipping and running SPE.py. There is no need
+> for it to be in the site-packages path as it is not a library but an
+> application. Is there specific reason why you want to install spe with
+> setup.py? 
+> Best regards,
+> Stani
+> 
+Stani,
+   You're more than welcome; SPE is a great product and I'd like to make 
+it easier to distribute and install.
+
+   I'm actually not using Windows but rather Red Hat Enterprise Linux.
+
+   There is a specific reason why I want to install SPE with setup.py. 
+My employer's custom Python software is (naturally) managed 
+independently of the Red Hat packaging system and we have to maintain 
+multiple platform-specific installations of Python and third-party 
+Python libraries and tools along with it. Our build system relies upon 
+the presence of a working setup.py in the archived tarball of every 
+third-party library and tool that is integrated into our Python 
+installations. Unfortunately, SPE's setup.py can neither produce a 
+version-labeled, complete tarball nor a complete installation if its 
+plug-ins aren't installed independently. The latter problem is 
+especially acute with Kiki and wxGlade because they don't include a 
+setup.py in their distributions at all.
+
+   Being that SPE is designed to favor launching the 
+independently-installed versions of the plug-ins over its own, SPE's 
+redundant plug-in installations aren't an issue for us. It's especially 
+nice to have SPE's setup.py install pychecker2 automatically because it 
+won't work without it.
+
+   I submitted this patch so that others in our situation would not be 
+discouraged from using SPE just because it can't be distributed and 
+installed like most other Python tools.
+
+Regards,
+Jason
+
+
+
